@@ -9,11 +9,23 @@ h1 {
 }
 
 body {
-    background-image: url("img/TEST-ASSET-NOT-MINE.png");
+    background-image: url("img/bg2.png");
+    background-size: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+.header {
+    width: 100%;
+    /*background-color: white;*/
+}
+
+.header-img {
+    width: 85%;
+    height: auto;
+    margin-top: 20px;
 }
 
 .header > h1 {
@@ -23,6 +35,7 @@ body {
 
 .icons {
     display: flex;
+    justify-content: center;
 }
 
 .icons > div {
@@ -34,11 +47,11 @@ body {
 
     margin: 12px 6px;
 
-    transition: all 0.25s ease-in-out;
+    transition: all 0.30s ease-in-out;
 }
 
 .icons > div:hover {
-    transition: all 0.15s ease-in-out;
+    transition: all 0.12s ease-in-out;
     transform: scale(1.2);
     background-color: #3C47C8;
     margin: 12px 10px;
@@ -49,10 +62,10 @@ body {
     border: 3px solid #3C47C8;
     border-radius: 15px;
 
-    width: 600px;
-    height: 300px;
+    width: 85%;
 
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 .area > div {
@@ -79,11 +92,12 @@ body {
     mix-blend-mode:multiply;
 }
 
-.area-header {
-    font-size: 60px;
-    color: #00000000;
-    text-shadow: 0px 0px 0px #FFFFFF;
+.area > h1 {
+    font-size: 55px;
+    justify-self: left;
+    margin-left: 5%;
+}
 
-    position: absolute;
-    y:0;
+.area > h2 {
+
 }
