@@ -1,0 +1,66 @@
+.area {
+    position: relative;
+    border: 3px solid #3C47C8;
+    border-radius: 15px;
+
+    width: 85%;
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.area > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.area-color {
+    z-index: -2;
+
+    background-color: #24296b;
+    mix-blend-mode: color;
+}
+
+.area-contrast {
+    z-index: -1;
+
+    background-color: #00000096;
+    mix-blend-mode:multiply;
+}
+
+.area > img {
+    width: 25%;
+    position: absolute;
+    left: 80%;
+    top: -50px;
+}
+
+.area > h1 {
+    font-size: 55px;
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 30%;
+    margin-bottom: 0;
+}
+
+.area > h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 30%;
+    margin-top: 0;
+    color: #9A9A9A;
+}
+
+.area > p {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 7%;
+    margin-right: 30%;
+    color: white;
+}
