@@ -9,7 +9,7 @@
     margin-bottom: 100px;
 }
 
-.area > div {
+.area-fill {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -44,19 +44,48 @@
     width: 700px;
     position: absolute;
     left: 7%;
-    top: -97px;
+    top: -65px;
     transition: all 0.20s ease-in-out;
 }
 
 .area > p {
-    padding-bottom: 40px;
+    padding-bottom: 4%;
 }
 
-.about-me > h1,h2, p {
+.about-me > :where(h1, h2, p) {
     padding-left: 7%;
     padding-right: 30%;
 }
 
 .about-me > h1 {
-    padding-top: 50px;
+    padding-top: 3%;
+}
+
+.steam-area-fill {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.steam-release {
+    width: 105%;
+    border-radius:0;
+    border-left: none;
+    border-right: none;
+}
+
+.steam-release > :where(h1, h2, p) {
+    padding-left: 12%;
+    padding-right: 50%;
+}
+
+.steam-release > h1 {
+    padding-top: 3%
+}
+
+.steam-release-section-header {
+    left: 12%
 }

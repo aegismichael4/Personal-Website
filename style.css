@@ -35,11 +35,21 @@ p {
 
 body {
     background-image: url("img/bg3.jpg");
+    background-repeat: no-repeat;
+    background-color: #0C0C0D;
     background-size: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
+}
+
+.background {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    z-index: -1;
 }
 
 .header {

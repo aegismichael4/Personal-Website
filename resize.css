@@ -1,7 +1,7 @@
 @media (max-width: 1200px) {
     .section-header {
         width: 500px;
-        top: -70px;
+        top: -47px;
     }
 
     .pfp {
@@ -24,7 +24,7 @@
 @media (max-width: 900px) {
     .section-header {
         width: 350px;
-        top: -49px;
+        top: -33px;
     }
 
     .pfp {
@@ -48,7 +48,7 @@
 @media (max-width: 600px) {
     .section-header {
         width: 250px;
-        top: -35px;
+        top: -23px;
     }
 
     h1 {
