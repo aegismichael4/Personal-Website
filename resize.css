@@ -44,6 +44,7 @@
     }
 }
 
+ /*mobile*/
 @media (max-width: 600px) {
     .section-header {
         width: 250px;
@@ -63,9 +64,9 @@
     }
 
     .icons > div {
-        width: 45px;
-        height: 45px;
-        border-radius: 8px;
+        width: 9%;
+        height: 9%;
+        border-radius: 7px;
     }
 }
 
