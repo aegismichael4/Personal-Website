@@ -16,8 +16,11 @@
         font-size: 22px;
     }
 
-    p {
+    p, .about-me-buttons > button {
         font-size: 20px;
+    }
+    .about-me-buttons > button > img {
+        height: 32px;
     }
 }
 
@@ -39,8 +42,12 @@
         font-size: 20px;
     }
 
-    p {
+    p, .about-me-buttons > button {
         font-size: 18px;
+    }
+
+    .about-me-buttons > button > img {
+        height: 27px;
     }
 }
 
@@ -59,8 +66,16 @@
         font-size: 14px;
     }
 
-    p {
+    p, .about-me-buttons > button {
         font-size: 12px;
+    }
+    .about-me-buttons > button > img {
+        height: 20px;
+    }
+
+    .about-me-buttons > button {
+        padding: 5px 5px;
+        border-radius: 5px;
     }
 
     .icons > div {
@@ -70,6 +85,6 @@
     }
 }
 
-h1, h2, p {
+h1, h2, p, .about-me-buttons > button {
     transition: all 0.20s ease-in-out;
 }

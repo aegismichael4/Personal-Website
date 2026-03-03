@@ -61,6 +61,35 @@
     padding-top: 3%;
 }
 
+.about-me-buttons {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+}
+
+.about-me-buttons > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 10px 10px;
+
+    font-family: "lora";
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+
+    border: none;
+    margin-bottom: 5%;
+}
+
+.about-me-buttons button > img {
+    height: 40px;
+}
+
 .steam-area-fill {
     position: absolute;
     top: 0;
