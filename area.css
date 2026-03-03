@@ -54,7 +54,7 @@
 
 .about-me > :where(h1, h2, p) {
     padding-left: 7%;
-    padding-right: 30%;
+    padding-right: 35%;
 }
 
 .about-me > h1 {
@@ -65,6 +65,9 @@
     position: absolute;
     right: 7%;
     bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
 }
 
 .about-me-buttons > button {
@@ -88,6 +91,10 @@
 
 .about-me-buttons button > img {
     height: 40px;
+}
+
+.break {
+    flex-basis: 100%
 }
 
 .steam-area-fill {

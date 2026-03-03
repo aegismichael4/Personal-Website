@@ -16,8 +16,33 @@
         font-size: 22px;
     }
 
+    .about-me > p {
+        margin-bottom: 12%;
+        padding-right: 15%;
+    }
+
+    .about-me > h2 {
+        padding-right: 20%;
+    }
+
+    .about-me-buttons {
+        justify-content: left;
+        left: 7%;
+        bottom: 2%;
+        margin-bottom: 0;
+    }
+
+    .break {
+        display: none;
+    }
+
     p, .about-me-buttons > button {
         font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .about-me-buttons > button {
+        margin-right: 2%;
     }
     .about-me-buttons > button > img {
         height: 32px;
@@ -40,6 +65,10 @@
 
     h2 {
         font-size: 20px;
+    }
+
+    .about-me > p {
+        margin-bottom: 14%;
     }
 
     p, .about-me-buttons > button {
