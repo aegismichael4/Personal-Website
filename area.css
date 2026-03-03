@@ -70,7 +70,7 @@
     justify-content: right;
 }
 
-.about-me-buttons > button {
+.about-me-buttons > a > button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,9 +87,17 @@
 
     border: none;
     margin-bottom: 5%;
+
+    transition: all 0.30s ease-in-out;
 }
 
-.about-me-buttons button > img {
+.about-me-buttons > a > button:hover {
+    transition: all 0.12s ease-in-out;
+    transform: scale(1.1);
+    background-color: #3C47C8;
+}
+
+.about-me-buttons > a > button > img {
     height: 40px;
 }
 

@@ -8,6 +8,10 @@
     src: url("fonts/Lora-VariableFont_wght.ttf") format("truetype");
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: "oswald";
     color: #FFFFFF;
