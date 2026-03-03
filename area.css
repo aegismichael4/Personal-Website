@@ -1,11 +1,11 @@
 .area {
     position: relative;
-    border: 3px solid #3C47C8;
+    border: 3px solid #14194B;
     border-radius: 15px;
 
     width: 85%;
 
-    margin-top: 50px;
+    margin-top: 10%;
     margin-bottom: 100px;
 }
 
@@ -33,34 +33,30 @@
     mix-blend-mode:multiply;
 }
 
-.area > img {
+.pfp {
     width: 25%;
     position: absolute;
     left: 80%;
-    top: -50px;
+    top: -70px;
 }
 
-.area > h1 {
-    font-size: 55px;
-    text-align: left;
-    margin-left: 7%;
-    margin-right: 30%;
-    margin-bottom: 0;
-}
-
-.area > h2 {
-    font-size: 28px;
-    text-align: left;
-    margin-left: 7%;
-    margin-right: 30%;
-    margin-top: 0;
-    color: #9A9A9A;
+.section-header {
+    width: 700px;
+    position: absolute;
+    left: 7%;
+    top: -97px;
+    transition: all 0.20s ease-in-out;
 }
 
 .area > p {
-    font-size: 24px;
-    text-align: left;
-    margin-left: 7%;
-    margin-right: 30%;
-    color: white;
+    padding-bottom: 40px;
+}
+
+.about-me > h1,h2, p {
+    padding-left: 7%;
+    padding-right: 30%;
+}
+
+.about-me > h1 {
+    padding-top: 50px;
 }
