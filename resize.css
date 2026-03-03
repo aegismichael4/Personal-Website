@@ -23,8 +23,8 @@
 
 @media (max-width: 900px) {
     .section-header {
-        width: 400px;
-        top: -55px;
+        width: 350px;
+        top: -49px;
     }
 
     .pfp {
@@ -32,7 +32,7 @@
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     h2 {
@@ -44,14 +44,10 @@
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
     .section-header {
         width: 250px;
         top: -35px;
-    }
-
-    .pfp {
-        top: -40px;
     }
 
     h1 {
@@ -67,9 +63,9 @@
     }
 
     .icons > div {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
     }
 }
 
