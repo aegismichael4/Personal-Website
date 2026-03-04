@@ -1,8 +1,12 @@
 const screen = document.getElementById("screen");
+const gameJamInfo = document.getElementById("game-jam-info");
+
 
 //#region parameters
 
-const _screenOpenTime = .5;
+let screenShowing = false;
+const _screenOpenTime = 1;
+const _textScrollDownTime = 2;
 
 //#endregion
 
@@ -38,49 +42,61 @@ function enableScreen(cardHeight) {
 
     root.style.setProperty('--screen-display', 'inline');
 
-    //const scrollGoal = window.innerHeight / 10;
-
-    //let height = 0;
-    // const interval = setInterval(() => {
-    //
-    //     let doneCheck = 0;
-    //
-    //     const deltaY = _screenOpenSpeed * deltaTime;
-    //     height += deltaY;
-    //     root.style.setProperty('--screen-height', `${height}px`);
-    //
-    //     const goalHeight = Math.max(10, screen.clientWidth) * 9.0 / 16.0;
-    //     if (height >= goalHeight) {
-    //         root.style.setProperty('--screen-height', `${goalHeight}px`);
-    //         doneCheck++;
-    //     }
-    //
-    //     if (screen.getBoundingClientRect().top > scrollGoal) {
-    //         window.scrollBy(0, deltaY);
-    //     } else {
-    //         doneCheck++;
-    //     }
-    //
-    //     if (doneCheck === 2) clearInterval(interval);
-    // });
-
     const startScroll = window.scrollY;
-    const scrollGoal = window.scrollY + cardHeight + (window.innerHeight / 3.2);
+    const scrollGoal = window.scrollY + cardHeight + (window.innerHeight / 2.6);
+
+    let textDisplayed = false;
+
     let timer = 0;
-    const interval = setInterval(() => {
+    const scrollDownScreen = setInterval(() => {
 
         timer += deltaTime;
-        if (timer > _screenOpenTime) clearInterval(interval);
+        if (timer > _screenOpenTime) {
+            screenShowing = true;
+            root.style.setProperty ('--screen-height', 'auto');
+            screen.style.setProperty("aspect-ratio", "16 / 9");
+            clearInterval(scrollDownScreen);
 
-        const goalHeight = Math.max(100, screen.clientWidth) * 9.0 / 16.0;
-        const height = lerp(0, goalHeight, easeOutSine(timer / _screenOpenTime));
-        root.style.setProperty('--screen-height', `${height}px`);
+        } else if (!textDisplayed && timer > _screenOpenTime / 2.5) {
+            textDisplayed = true;
+            displayText();
+        }
 
-        const newScroll = lerp(startScroll, scrollGoal, timer / _screenOpenTime);
+        const t = timer / _screenOpenTime;
+
+        if (!screenShowing) {
+            const goalHeight = Math.max(100, screen.clientWidth) * 9.0 / 16.0;
+            const height = lerp(0, goalHeight, easeOutCubic(t));
+            root.style.setProperty ('--screen-height', `${height}px`);
+        }
+
+        const newScroll = lerp(startScroll, scrollGoal, easeOutCubic(t));
         window.scrollTo({
             top: newScroll,
             behavior: "instant"
         });
+    });
+}
+
+function displayText() {
+    gameJamInfo.style.setProperty("display", "block");
+
+    let startY = -screen.clientHeight;
+    let timer = 0;
+    const scrollDownText = setInterval(() => {
+
+        timer += deltaTime;
+        if (timer > _textScrollDownTime) {
+            clearInterval(scrollDownText);
+        }
+
+        let t = lerp(0, 1, easeOutSine( timer / _textScrollDownTime));
+
+        let newY = lerp(startY, 0, t);
+        gameJamInfo.style.setProperty("transform", `translateY(${newY}px)`);
+
+        let newOpacity = t * 100;
+        gameJamInfo.style.setProperty("filter", `opacity(${newOpacity}%)`);
     });
 }
 
@@ -94,6 +110,10 @@ function lerp(a, b, t) {
 
 function easeOutSine(x) {
     return Math.sin((x * Math.PI) / 2);
+}
+
+function easeOutCubic(x) {
+    return 1 - Math.pow(1 - x, 3);
 }
 
 //#endregion

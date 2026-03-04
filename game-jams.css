@@ -7,13 +7,13 @@ h3 {
 }
 
 .game-jams {
-    margin-bottom: 500px;
+    margin-bottom: 200px;
 }
 
 .game-jams-container {
     display: flex;
     justify-content: center;
-    margin: 12% 7% 5%;
+    margin: 8% 7% 5%;
     gap: 2%;
 }
 
@@ -61,8 +61,14 @@ h3 {
     display: var(--screen-display);
     height: var(--screen-height);
 
+    z-index: 10;
+    position: relative;
+}
 
+.game-jam-info {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 5%;
 
-    transition: transform 2s ease;
-
+    display: none;
 }
