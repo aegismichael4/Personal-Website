@@ -6,6 +6,13 @@
 }
 
 @media (max-width: 1100px) {
+
+    :root {
+        --h1-size: 35px;
+        --h2-size: 22px;
+        --p-size: 20px;
+    }
+
     .section-header {
         width: 500px;
         top: -47px;
@@ -13,14 +20,6 @@
 
     .pfp {
         top: -40px;
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-
-    h2 {
-        font-size: 22px;
     }
 
     .icons > div {
@@ -49,7 +48,6 @@
     }
 
     p, .about-me-buttons > a > button {
-        font-size: 20px;
         margin-top: 20px;
     }
 
@@ -91,55 +89,20 @@
     }
 }
 
-/*@media (max-width: 900px) {*/
-/*    .section-header {*/
-/*        width: 350px;*/
-/*        top: -33px;*/
-/*    }*/
-
-/*    .pfp {*/
-/*        top: -32px;*/
-/*    }*/
-
-/*    h1 {*/
-/*        font-size: 28px;*/
-/*    }*/
-
-/*    h2 {*/
-/*        font-size: 20px;*/
-/*    }*/
-
-/*    .about-me > p {*/
-/*        margin-bottom: 14%;*/
-/*    }*/
-
-/*    p, .about-me-buttons > a > button {*/
-/*        font-size: 18px;*/
-/*    }*/
-
-/*    .about-me-buttons > a > button > img {*/
-/*        height: 27px;*/
-/*    }*/
-/*}*/
-
  /*mobile*/
 @media (max-width: 800px) {
+
+    :root {
+        --h1-size: 20px;
+        --h2-size: 12px;
+        --p-size: 11px;
+    }
+
     .section-header {
         width: 300px;
         top: -28px;
     }
 
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 12px;
-    }
-
-    p, .about-me-buttons > a > button {
-        font-size: 11px;
-    }
     .about-me-buttons > a > button > img {
         height: 20px;
     }

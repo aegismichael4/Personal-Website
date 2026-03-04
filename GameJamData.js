@@ -1,12 +1,13 @@
 //#region data
 
 class GameJamData {
-    constructor(id, title, position, description, images) {
+    constructor(id, title, position, description, images, gameJamName) {
         this.id = id;
         this.title = title;
         this.position = position;
         this.description = description;
         this.images = images;
+        this.gameJamName = gameJamName;
     }
 }
 
@@ -29,7 +30,8 @@ function createData() {
         "The game itself is a top-down puzzle exploration game. You play as a little ship, piloting around and " +
         "making use of the picking up and throwing mechanic to solve environmental puzzles, knock around the " +
         "antivirus space whales, and return data to your home ship (the usb port).",
-        ["img/card-roi.png", "img/card-slingstar.png"]
+        ["img/card-roi.png", "img/card-slingstar.png"],
+        "Jame Gam 50"
     ));
 }
 createData();
@@ -45,6 +47,7 @@ function retrieveData(id) {
 const title = document.getElementById("game-jam-title");
 const position = document.getElementById("game-jam-position");
 const description = document.getElementById("game-jam-description");
+const name = document.getElementById("game-jam-name");
 
 function setDescription(gameID) {
     const data = retrieveData(gameID);
@@ -56,6 +59,7 @@ function setDescription(gameID) {
     title.innerHTML = data.title;
     position.innerHTML = data.position;
     description.innerHTML = data.description;
+    name.innerHTML = data.gameJamName;
 
     setCarousel(data.images);
 }

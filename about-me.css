@@ -29,7 +29,7 @@
     font-family: "lora";
     font-weight: bold;
     color: black;
-    font-size: 24px;
+    font-size: var(--p-size);
 
     border: none;
     margin-bottom: 5%;

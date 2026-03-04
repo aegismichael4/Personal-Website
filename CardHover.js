@@ -1,4 +1,4 @@
-const hoverEffectIntensity = 30;
+const hoverEffectIntensity = 20;
 
 const root = document.documentElement;
 const hoverCardsContainer = document.getElementById("hover-cards");
