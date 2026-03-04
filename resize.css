@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .section-header {
         width: 500px;
         top: -47px;
@@ -16,8 +16,13 @@
         font-size: 22px;
     }
 
+    .icons > div {
+        width: 65px;
+        height: 65px;
+    }
+
     .about-me > p {
-        margin-bottom: 10%;
+        padding-bottom: 15%;
         padding-right: 15%;
     }
 
@@ -137,15 +142,10 @@
         border-radius: 5px;
     }
 
-    .header-icons > div {
+    .icons > div {
         width: 40px;
         height: 40px;
         border-radius: 8px;
-    }
-
-    .steam-icon > div {
-        width: 40px;
-        height: 40px;
     }
 }
 
