@@ -1,6 +1,8 @@
 :root {
     --mouseX: 0deg;
     --mouseY: 0deg;
+    --screen-display: none;
+    --screen-height: 1px;
 }
 
 @font-face {

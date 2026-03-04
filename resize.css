@@ -1,7 +1,7 @@
 /*super wide*/
-@media (min-width: 1700px) {
+@media (min-width: 1930px) {
     .steam-release {
-        min-height: 900px;
+        min-height: 33vw;
     }
 }
 

@@ -6,14 +6,14 @@ h3 {
     margin: 0;
 }
 
-h4 {
-
+.game-jams {
+    margin-bottom: 500px;
 }
 
 .game-jams-container {
     display: flex;
     justify-content: center;
-    margin: 8% 5%;
+    margin: 12% 7% 5%;
     gap: 2%;
 }
 
@@ -39,7 +39,7 @@ h4 {
     font-family: "lora";
     color: #9A9A9A;
     font-weight: bold;
-    font-size: 1vw;
+    font-size: .9vw;
 
     display: block;
     text-align: left;
@@ -49,4 +49,20 @@ h4 {
 
 .game-jam-link:hover {
     text-decoration: underline;
+}
+
+.web-game-screen {
+    border:none;
+    background-color: black;
+    border-radius: 2%;
+    width: stretch;
+    margin: 0 7%;
+
+    display: var(--screen-display);
+    height: var(--screen-height);
+
+
+
+    transition: transform 2s ease;
+
 }
