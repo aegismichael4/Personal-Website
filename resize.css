@@ -79,39 +79,39 @@
     }
 }
 
-@media (max-width: 900px) {
-    .section-header {
-        width: 350px;
-        top: -33px;
-    }
+/*@media (max-width: 900px) {*/
+/*    .section-header {*/
+/*        width: 350px;*/
+/*        top: -33px;*/
+/*    }*/
 
-    .pfp {
-        top: -32px;
-    }
+/*    .pfp {*/
+/*        top: -32px;*/
+/*    }*/
 
-    h1 {
-        font-size: 28px;
-    }
+/*    h1 {*/
+/*        font-size: 28px;*/
+/*    }*/
 
-    h2 {
-        font-size: 20px;
-    }
+/*    h2 {*/
+/*        font-size: 20px;*/
+/*    }*/
 
-    .about-me > p {
-        margin-bottom: 14%;
-    }
+/*    .about-me > p {*/
+/*        margin-bottom: 14%;*/
+/*    }*/
 
-    p, .about-me-buttons > a > button {
-        font-size: 18px;
-    }
+/*    p, .about-me-buttons > a > button {*/
+/*        font-size: 18px;*/
+/*    }*/
 
-    .about-me-buttons > a > button > img {
-        height: 27px;
-    }
-}
+/*    .about-me-buttons > a > button > img {*/
+/*        height: 27px;*/
+/*    }*/
+/*}*/
 
  /*mobile*/
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .section-header {
         width: 300px;
         top: -28px;
