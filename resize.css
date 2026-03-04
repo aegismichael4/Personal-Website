@@ -17,7 +17,7 @@
     }
 
     .about-me > p {
-        margin-bottom: 12%;
+        margin-bottom: 10%;
         padding-right: 15%;
     }
 
@@ -28,7 +28,7 @@
     .about-me-buttons {
         justify-content: left;
         left: 7%;
-        bottom: 2%;
+        bottom: 5%;
         margin-bottom: 0;
     }
 
@@ -36,16 +36,46 @@
         display: none;
     }
 
-    p, .about-me-buttons > button {
+    p, .about-me-buttons > a > button {
         font-size: 20px;
         margin-top: 20px;
     }
 
-    .about-me-buttons > button {
+    .about-me-buttons > a {
         margin-right: 2%;
     }
-    .about-me-buttons > button > img {
+    .about-me-buttons > a > button > img {
         height: 32px;
+    }
+
+    .steam-release > :where(h1, p) {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    .steam-release > h2 {
+        padding-left: 12%;
+        padding-right: 22%;
+    }
+
+    .steam-release > p {
+        margin-bottom: 47%;
+    }
+
+    .steam-release-section-header {
+        left: 12%;
+    }
+
+    .trailer {
+        width: 76%;
+        left: 12%;
+        bottom: 5%;
+        top: auto;
+    }
+
+    .steam-icon {
+        right: 10%;
+        top: 5%;
     }
 }
 
@@ -71,11 +101,11 @@
         margin-bottom: 14%;
     }
 
-    p, .about-me-buttons > button {
+    p, .about-me-buttons > a > button {
         font-size: 18px;
     }
 
-    .about-me-buttons > button > img {
+    .about-me-buttons > a > button > img {
         height: 27px;
     }
 }
@@ -95,22 +125,27 @@
         font-size: 12px;
     }
 
-    p, .about-me-buttons > button {
+    p, .about-me-buttons > a > button {
         font-size: 11px;
     }
-    .about-me-buttons > button > img {
+    .about-me-buttons > a > button > img {
         height: 20px;
     }
 
-    .about-me-buttons > button {
+    .about-me-buttons > a > button {
         padding: 5px 5px;
         border-radius: 5px;
     }
 
-    .icons > div {
-        width: 12%;
-        height: 12%;
+    .header-icons > div {
+        width: 40px;
+        height: 40px;
         border-radius: 8px;
+    }
+
+    .steam-icon > div {
+        width: 40px;
+        height: 40px;
     }
 }
 

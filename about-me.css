@@ -1,0 +1,52 @@
+.about-me > :where(h1, h2, p) {
+    padding-left: 7%;
+    padding-right: 35%;
+}
+
+.about-me > h1 {
+    padding-top: 3%;
+}
+
+.about-me-buttons {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+.about-me-buttons > a > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 10px;
+
+    padding: 10px 10px;
+
+    font-family: "lora";
+    font-weight: bold;
+    color: black;
+    font-size: 24px;
+
+    border: none;
+    margin-bottom: 5%;
+
+    transition: all 0.30s ease-in-out;
+}
+
+.about-me-buttons > a > button:hover {
+    transition: all 0.12s ease-in-out;
+    transform: scale(1.1);
+    background-color: #3C47C8;
+}
+
+.about-me-buttons > a > button > img {
+    height: 40px;
+}
+
+.break {
+    flex-basis: 100%
+}
