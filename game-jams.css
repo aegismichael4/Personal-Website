@@ -75,43 +75,38 @@ h3 {
 .game-jam-info {
     margin-left: 7%;
     margin-right: 7%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
 
     display: none;
-    /*grid-columns: auto auto;*/
-    gap: 5%;
 }
 
-.description {
-    /*float: left;*/
+.game-jam-info > h1 {
+    padding-right: 49%;
 }
 
 .game-jam-icon {
     position: absolute;
-    right: 37%;
-    top: 1%;
+    right: 41%;
+    top: 0;
+    padding-top: 2%;
 }
 
 .carousel {
-    /*position: absolute;*/
-    /*right: 0;*/
-    /*top: 3%;*/
-
     float: right;
-    margin-top: 5%;
-    width: 150%;
-
-    /*display: grid;*/
-    /*grid-area: overlap;*/
-
+    width:  40%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 
 .carousel-images > img {
     width: 100%;
-    border-radius: 5%;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-.carousel > h2 {
-    text-align: center;
+.dots {
+    position: absolute;
+    top: 50%;
 }

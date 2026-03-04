@@ -55,7 +55,7 @@ function enableScreen(cardHeight) {
 }
 
 function displayText() {
-    gameJamInfo.style.setProperty("display", "flex");
+    gameJamInfo.style.setProperty("display", "block");
 
     let startY = -screen.clientHeight;
     let timer = 0;
