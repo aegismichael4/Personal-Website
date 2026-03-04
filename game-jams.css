@@ -72,3 +72,13 @@ h3 {
 
     display: none;
 }
+
+.game-jam-info > :where(h1, h2, p) {
+    margin-right: 40%;
+}
+
+.game-jam-icon {
+    position: absolute;
+    right: 40%;
+    top: 1%;
+}

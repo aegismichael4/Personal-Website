@@ -5,6 +5,7 @@ const gameJamInfo = document.getElementById("game-jam-info");
 //#region parameters
 
 let screenShowing = false;
+let textShowing = false;
 const _screenOpenTime = 1;
 const _textScrollDownTime = 2;
 
@@ -45,8 +46,6 @@ function enableScreen(cardHeight) {
     const startScroll = window.scrollY;
     const scrollGoal = window.scrollY + cardHeight + (window.innerHeight / 2.6);
 
-    let textDisplayed = false;
-
     let timer = 0;
     const scrollDownScreen = setInterval(() => {
 
@@ -57,8 +56,8 @@ function enableScreen(cardHeight) {
             screen.style.setProperty("aspect-ratio", "16 / 9");
             clearInterval(scrollDownScreen);
 
-        } else if (!textDisplayed && timer > _screenOpenTime / 2.5) {
-            textDisplayed = true;
+        } else if (!textShowing && timer > _screenOpenTime / 2.5) {
+            textShowing = true;
             displayText();
         }
 
