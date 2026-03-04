@@ -1,41 +1,18 @@
 const screen = document.getElementById("screen");
 const gameJamInfo = document.getElementById("game-jam-info");
 
-
-//#region parameters
-
 let screenShowing = false;
 let textShowing = false;
 const _screenOpenTime = 1;
 const _textScrollDownTime = 2;
 
-//#endregion
-
-//#region html
-
 // reference got in CardHover.js
 hoverCards.forEach((card) => {
     card.addEventListener("click", (ev) => {
+        setDescription(card.parentElement.id);
         enableScreen(card.getBoundingClientRect().top);
     });
 });
-
-//#endregion
-
-//#region tick
-
-let lastTime = 0;
-let deltaTime = 0;
-function tick(timestamp) {
-    if (lastTime === 0) lastTime = timestamp;
-    deltaTime = (timestamp - lastTime) / 1000;
-    lastTime = timestamp;
-
-    requestAnimationFrame(tick);
-}
-requestAnimationFrame(tick);
-
-//#endregion
 
 //#region coroutines
 

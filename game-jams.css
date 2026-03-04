@@ -77,8 +77,33 @@ h3 {
     margin-right: 40%;
 }
 
+.game-jam-info > h1 {
+    font-size: 50px;
+}
+
 .game-jam-icon {
     position: absolute;
-    right: 40%;
+    right: 37%;
     top: 1%;
+}
+
+.carousel {
+    position: absolute;
+    right: 0;
+    top: 3%;
+
+    width: 35%;
+
+    display: grid;
+    grid-area: overlap;
+
+}
+
+.carousel-images > img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.carousel > h2 {
+    text-align: center;
 }
