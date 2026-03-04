@@ -1,0 +1,52 @@
+h3 {
+    font-family: "oswald";
+    color: white;
+    font-size: 1.5vw;
+    text-align: left;
+    margin: 0;
+}
+
+h4 {
+
+}
+
+.game-jams-container {
+    display: flex;
+    justify-content: center;
+    margin: 8% 5%;
+    gap: 2%;
+}
+
+.game-jams-container > div {
+    width: 100%;
+    perspective: 1000px;
+}
+
+.game-jams-container > div > img {
+    width: 100%;
+    border-radius: 5%;
+    object-fit: cover;
+
+    transition: transform 0.02s ease;
+    transform-style: preserve-3d;
+}
+
+.game-jams-container > div > img:hover {
+    transform: rotate3d(0,1,0, var(--mouseX)) rotate3D(-1,0,0, var(--mouseY)) scale(1.08);
+}
+
+.game-jam-link {
+    font-family: "lora";
+    color: #9A9A9A;
+    font-weight: bold;
+    font-size: 1vw;
+
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.game-jam-link:hover {
+    text-decoration: underline;
+}

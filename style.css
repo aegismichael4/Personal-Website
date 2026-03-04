@@ -1,3 +1,8 @@
+:root {
+    --mouseX: 0deg;
+    --mouseY: 0deg;
+}
+
 @font-face {
     font-family: "oswald";
     src: url("fonts/Oswald-VariableFont_wght.ttf") format("truetype");
