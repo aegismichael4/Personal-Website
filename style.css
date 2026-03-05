@@ -49,7 +49,7 @@ p {
 }
 
 body {
-    background-image: url("img/bg3.jpg");
+    background-image: url("img/backgrounds/bg3.jpg");
     background-repeat: no-repeat;
     background-color: #0C0C0D;
     background-size: 100%;
@@ -87,6 +87,7 @@ body {
 .icons {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .icons > div {
@@ -96,14 +97,14 @@ body {
     background-color: white;
     border-radius: 10px;
 
-    margin: 0 0 6px 6px;
+    margin: 0 5px;
 
-    transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease;
 }
 
 .icons > div:hover {
-    transition: all 0.12s ease-in-out;
+    transition: all 0.12s ease;
     transform: scale(1.2);
     background-color: #3C47C8;
-    margin: 9px 10px;
+    /*margin: 0 7px;*/
 }

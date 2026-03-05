@@ -76,6 +76,23 @@ function createData() {
         "https://itch.io/jam/gmtk-2025",
         "https://aegishehe.itch.io/tugboat-fishin"
     ));
+
+    data.push(new GameJamData(
+        "roi",
+        "ROI",
+        "Studio Verdigris: Lead Design ⭑ Technical Artist",
+        "ROI, the second game I made with Studio Verdigris, stands for both 'Return on Investment' and 'Rush on Impact.' The core " +
+        "idea of the game is that your health is inversely proportional to your damage, and you're outfitted with a parry to allow you both to " +
+        "rush in on enemies on an endlessly generating train and block all damage.<br><br>" +
+        "More than anything, on my part ROI became an amazing practice ground for all sorts of VFX. From hand-animating the increasingly flaming " +
+        "health bar to the gradiented parry afterimages to the dynamic title screen, I fell in love with the flashy, gritty visual effect style " +
+        "of ROI.",
+        ["img/screenshots/tugboat-fishin/1.png", "img/screenshots/tugboat-fishin/2.png", "img/screenshots/tugboat-fishin/3.png",
+            "img/screenshots/tugboat-fishin/4.png", "img/screenshots/tugboat-fishin/5.png"],
+        "Uni Game Jam",
+        "https://itch.io/jam/gmtk-2025",
+        "https://aegishehe.itch.io/tugboat-fishin"
+    ));
 }
 createData();
 
