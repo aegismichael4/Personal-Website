@@ -30,7 +30,7 @@ function createData() {
         "The game itself is a top-down puzzle exploration game. You play as a little ship, piloting around and " +
         "making use of the picking up and throwing mechanic to solve environmental puzzles, knock around the " +
         "antivirus space whales, and return data to your home ship (the usb port).",
-        ["img/card-roi.png", "img/card-slingstar.png"],
+        ["img/card-roi.png", "img/card-slingstar.png", "img/card-eltanin.png"],
         "Jame Gam 50"
     ));
 }
