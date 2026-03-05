@@ -15,6 +15,7 @@ hoverCards.forEach((card) => {
         setDescription(card.parentElement.id);
         enableScreen(card.getBoundingClientRect().top);
         displayText();
+        setActiveGame(card.parentElement.id);
     });
 });
 
@@ -23,8 +24,26 @@ gameJamTitles.forEach((title) => {
        setDescription(title.parentElement.id);
        enableScreen(title.getBoundingClientRect().top - window.innerHeight / 3.5);
        displayText();
+       setActiveGame(title.parentElement.id)
    });
 });
+
+function setActiveGame(gameID) {
+    switch(gameID) {
+        case "sswud":
+            screen.src = "./web-games/sswud/index.html";
+            break;
+        case "polaris":
+            screen.src = "./web-games/polaris/index.html";
+            break;
+        case "tugboat-fishin":
+            screen.src = "./web-games/tugboat-fishin/index.html";
+            break;
+        case "slingstar":
+            screen.src = "./web-games/slingstar/index.html";
+            break;
+    }
+}
 
 //#region coroutines
 
