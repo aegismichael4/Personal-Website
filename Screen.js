@@ -1,6 +1,9 @@
 const screen = document.getElementById("screen");
 const gameJamInfo = document.getElementById("game-jam-info");
 
+
+const gameJamTitles = hoverCardsContainer.querySelectorAll("h3");
+
 let screenShowing = false;
 let textShowing = false;
 const _screenOpenTime = 1;
@@ -13,6 +16,14 @@ hoverCards.forEach((card) => {
         enableScreen(card.getBoundingClientRect().top);
         displayText();
     });
+});
+
+gameJamTitles.forEach((title) => {
+   title.addEventListener("click", (ev) => {
+       setDescription(title.parentElement.id);
+       enableScreen(title.getBoundingClientRect().top - window.innerHeight / 3.5);
+       displayText();
+   });
 });
 
 //#region coroutines

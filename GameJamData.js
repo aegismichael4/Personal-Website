@@ -72,7 +72,7 @@ function createData() {
         "inspired by my Discord whiteboard sketches with my brother.",
         ["img/screenshots/tugboat-fishin/1.png", "img/screenshots/tugboat-fishin/2.png", "img/screenshots/tugboat-fishin/3.png",
             "img/screenshots/tugboat-fishin/4.png", "img/screenshots/tugboat-fishin/5.png"],
-        "Uni Game Jam",
+        "GMTK 2025",
         "https://itch.io/jam/gmtk-2025",
         "https://aegishehe.itch.io/tugboat-fishin"
     ));
@@ -87,11 +87,27 @@ function createData() {
         "More than anything, on my part ROI became an amazing practice ground for all sorts of VFX. From hand-animating the increasingly flaming " +
         "health bar to the gradiented parry afterimages to the dynamic title screen, I fell in love with the flashy, gritty visual effect style " +
         "of ROI.",
-        ["img/screenshots/tugboat-fishin/1.png", "img/screenshots/tugboat-fishin/2.png", "img/screenshots/tugboat-fishin/3.png",
-            "img/screenshots/tugboat-fishin/4.png", "img/screenshots/tugboat-fishin/5.png"],
-        "Uni Game Jam",
-        "https://itch.io/jam/gmtk-2025",
-        "https://aegishehe.itch.io/tugboat-fishin"
+        ["img/screenshots/roi/1.png", "img/screenshots/roi/2.png", "img/screenshots/roi/3.png"],
+        "Brackeys 2025.2",
+        "https://itch.io/jam/brackeys-14",
+        "https://studioverdigris.itch.io/roi"
+    ));
+
+    data.push(new GameJamData(
+        "slingstar",
+        "slingstar",
+        "Studio Verdigris: Lead Design ⭑ Graphics Programmer ⭑ VFX Artist",
+        "Slingstar was my first-ever 3D game, and an amazing experience at that! Given the theme 'Cozy Cyberpunk,' we came up with " +
+        "the idea for a cooking sim game about slingin' dawgs in a dystopian cyber-city, which turned out to be really fun to work on. The " +
+        "core-loop is simple: make a good enough hot dog to please the current customer, given their sensitivity. More lenient customers will " +
+        "tolerate more rat meat and are more likely to leave a good review, and vice versa.<br><br>" +
+        "The part of working on slingstar that unexpectedly became my favorite was the 3D animations. I particularly enjoyed making the telephone " +
+        "have a lot of personality and emotion with the happy and angry customer calls, pairing in some particle effects for style.",
+        ["img/screenshots/slingstar/1.png", "img/screenshots/slingstar/2.png", "img/screenshots/slingstar/3.png",
+            "img/screenshots/slingstar/4.png"],
+        "ICJ6",
+        "https://itch.io/jam/international-college-jam-6",
+        "https://saisgonerogue.itch.io/slingstar"
     ));
 }
 createData();

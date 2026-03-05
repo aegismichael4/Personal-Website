@@ -5,6 +5,13 @@ h3 {
     text-align: left;
     margin: 0;
     padding-top: 1.5%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+h3:hover {
+    color: #3C47C8;
+    transition: all 0.2s ease;
 }
 
 .game-jams {
@@ -19,8 +26,11 @@ h3 {
 }
 
 .game-jams-container > div {
-    width: 100%;
+    width: stretch;
     perspective: 1000px;
+    cursor: pointer;
+    justify-items: left;
+    display: inline-block;
 }
 
 .game-jams-container > div > img {
@@ -46,16 +56,20 @@ h3 {
     text-align: left;
     margin: 0;
     padding: 0;
+
+    transition: all 0.3s ease;
 }
 
 .game-jam-link:hover {
+    color: #3C47C8;
     text-decoration: underline;
+    transition: all 0.2s ease;
 }
 
 .carousel-link {
     font-size: var(--h2-size);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .web-game-screen {
@@ -80,8 +94,8 @@ h3 {
     display: none;
 }
 
-.game-jam-info > h1 {
-    padding-right: 49%;
+.game-jam-info > :where(h1, h2) {
+    padding-right: 52%;
 }
 
 .game-jam-icon {
@@ -97,6 +111,11 @@ h3 {
     padding-left: 2%;
     padding-bottom: 2%;
     padding-top: 2%;
+    display: inline-block;
+}
+
+.carousel > a {
+    display: inline-block;
 }
 
 .carousel-images > img {

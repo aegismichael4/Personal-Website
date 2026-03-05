@@ -13,7 +13,6 @@ function setCarousel(imageSources) {
     activeImages = [];
     activeDots = [];
 
-    const count = imageSources.length;
     carouselImages.innerHTML = ""; // clear all images and dots
 
     const dots = document.createElement("div");
