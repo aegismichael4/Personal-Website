@@ -51,7 +51,7 @@ function setActiveImage() {
         activeImages[i].setAttribute("style", "display: none");
         activeDots[i].setAttribute("class", "dotInactive");
     }
-    activeImages[activeImageIndex].setAttribute("style", "display: inline");
+    activeImages[activeImageIndex].setAttribute("style", "display: inline; object-fit: contain; background-color: black;");
     activeDots[activeImageIndex].setAttribute("class", "dotActive");
 }
 

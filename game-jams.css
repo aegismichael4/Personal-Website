@@ -8,7 +8,7 @@ h3 {
 }
 
 .game-jams {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
 }
 
 .game-jams-container {
@@ -75,7 +75,7 @@ h3 {
 .game-jam-info {
     margin-left: 7%;
     margin-right: 7%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
 
     display: none;
 }
@@ -96,7 +96,6 @@ h3 {
     width:  40%;
     padding-left: 2%;
     padding-bottom: 2%;
-    padding-top: 2%;
 }
 
 .carousel-images > img {
@@ -104,16 +103,17 @@ h3 {
     aspect-ratio: 16 / 9;
     border-radius: 5px;
     transition: transform 0.3s ease;
+    margin-bottom: 1%;
 }
 
 .dots {
     position: absolute;
-    top: 16vw;
+    top: 14.5vw;
     display: flex;
     gap: .2vw;
 
     width: stretch;
-    height: 1vw;
+    height: .9vw;
 
     justify-content: center;
     align-items: center;

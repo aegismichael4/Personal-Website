@@ -11,6 +11,7 @@ hoverCards.forEach((card) => {
     card.addEventListener("click", (ev) => {
         setDescription(card.parentElement.id);
         enableScreen(card.getBoundingClientRect().top);
+        displayText();
     });
 });
 
@@ -33,9 +34,6 @@ function enableScreen(cardHeight) {
             screen.style.setProperty("aspect-ratio", "16 / 9");
             clearInterval(scrollDownScreen);
 
-        } else if (!textShowing && timer > _screenOpenTime / 2.5) {
-            textShowing = true;
-            displayText();
         }
 
         const t = timer / _screenOpenTime;
@@ -55,9 +53,16 @@ function enableScreen(cardHeight) {
 }
 
 function displayText() {
+
+    if(textShowing) return;
+    textShowing = true;
+
     gameJamInfo.style.setProperty("display", "block");
 
-    let startY = -screen.clientHeight;
+    let startY = -screen.clientHeight * 1.1;
+    gameJamInfo.style.setProperty("transform", `translateY(${startY}px)`);
+
+
     let timer = 0;
     const scrollDownText = setInterval(() => {
 
@@ -72,7 +77,7 @@ function displayText() {
         gameJamInfo.style.setProperty("transform", `translateY(${newY}px)`);
 
         let newOpacity = t * 100;
-        gameJamInfo.style.setProperty("filter", `opacity(${newOpacity}%)`);
+        //gameJamInfo.style.setProperty("filter", `opacity(${newOpacity}%)`);
     });
 }
 
