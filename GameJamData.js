@@ -33,7 +33,7 @@ function createData() {
         "making use of the picking up and throwing mechanic to solve environmental puzzles, knock around the " +
         "antivirus space whales, and return data to your home ship (the usb port).",
         ["img/screenshots/sswud/1.png", "img/screenshots/sswud/2.png", "img/screenshots/sswud/3.png", "img/screenshots/sswud/4.png"],
-        "Jame Gam 50",
+        "Jame Gam 50 ⭑ June 2025",
         "https://itch.io/jam/jame-gam-50",
         "https://aegishehe.itch.io/super-space-whalez-ultra-deluxe"
 
@@ -51,7 +51,7 @@ function createData() {
         "back at it makes me both nostalgic and proud, knowing how far we've come!",
         ["img/screenshots/polaris/1.png", "img/screenshots/polaris/2.png", "img/screenshots/polaris/3.png", "img/screenshots/polaris/4.png",
                 "img/screenshots/polaris/5.png"],
-        "Uni Game Jam",
+        "Uni Game Jam ⭑ July 2025",
         "https://itch.io/jam/california-uni-summer-game-jam",
         "https://saisgonerogue.itch.io/polaris"
     ));
@@ -72,7 +72,7 @@ function createData() {
         "inspired by my Discord whiteboard sketches with my brother.",
         ["img/screenshots/tugboat-fishin/1.png", "img/screenshots/tugboat-fishin/2.png", "img/screenshots/tugboat-fishin/3.png",
             "img/screenshots/tugboat-fishin/4.png", "img/screenshots/tugboat-fishin/5.png"],
-        "GMTK 2025",
+        "GMTK 2025 ⭑ August 2025",
         "https://itch.io/jam/gmtk-2025",
         "https://aegishehe.itch.io/tugboat-fishin"
     ));
@@ -88,7 +88,7 @@ function createData() {
         "health bar to the gradiented parry afterimages to the dynamic title screen, I fell in love with the flashy, gritty visual effect style " +
         "of ROI.",
         ["img/screenshots/roi/1.png", "img/screenshots/roi/2.png", "img/screenshots/roi/3.png"],
-        "Brackeys 2025.2",
+        "Brackeys 2025.2 ⭑ August 2025",
         "https://itch.io/jam/brackeys-14",
         "https://studioverdigris.itch.io/roi"
     ));
@@ -105,9 +105,31 @@ function createData() {
         "have a lot of personality and emotion with the happy and angry customer calls, pairing in some particle effects for style.",
         ["img/screenshots/slingstar/1.png", "img/screenshots/slingstar/2.png", "img/screenshots/slingstar/3.png",
             "img/screenshots/slingstar/4.png"],
-        "ICJ6",
+        "ICJ6 ⭑ December 2025",
         "https://itch.io/jam/international-college-jam-6",
         "https://saisgonerogue.itch.io/slingstar"
+    ));
+
+    data.push(new GameJamData(
+        "the-heist",
+        "The Heist",
+        "Solo Development",
+        "The Heist was my final project for CMPM 120: Game Development Experience. With class requirements preventing me from " +
+        "going over a custom asset limit (which I used almost exclusively on the character animations), I was forced to focus very heavily " +
+        "on the design and implementation of the game, which turned out to be a great experience for me. The Heist is a quick journey there-" +
+        "and-back, with a gameplay goal for something speedrun friendly. I wanted something easy to learn and difficult to master, so I " +
+        "added movement 'techs' that I'm interested in, like a walljump inspired by Super Metroid and a midair dive allowing for riskier routes." +
+        "<br><br>" +
+        "Excited by the idea of surprising the player with a false ending, I added an 'artifact' for the player to collect at the end of the classic " +
+        "sidescrolling platformer, with the twist being that it flips your gravity to stick you to the rightmost side, forcing you to platform your " +
+        "way back up as the giant stone door closes in the distance." +
+        "<br><br>" +
+        "To incite some friendly competition and show off my game, I hosted a little speedrun competition with my friends and peers after I'd " +
+        "finished the game for a grand total of $5. It was awesome.",
+        ["img/screenshots/the-heist/1.png", "img/screenshots/the-heist/2.png", "img/screenshots/the-heist/3.png"],
+        "CMPM 120 ⭑ May 2025",
+        "",
+        "https://aegismichael4.github.io/Final-Project-CMPM-120/"
     ));
 }
 createData();

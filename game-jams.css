@@ -19,7 +19,8 @@ h3:hover {
 }
 
 .game-jams-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     margin: 8% 7% 5%;
     gap: 2%;

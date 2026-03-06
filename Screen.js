@@ -42,6 +42,9 @@ function setActiveGame(gameID) {
         case "slingstar":
             screen.src = "./web-games/slingstar/index.html";
             break;
+        case "the-heist":
+            screen.src = "https://aegismichael4.github.io/Final-Project-CMPM-120/";
+            break;
         default:
             screen.src = "";
     }
