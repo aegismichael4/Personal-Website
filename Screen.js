@@ -42,6 +42,8 @@ function setActiveGame(gameID) {
         case "slingstar":
             screen.src = "./web-games/slingstar/index.html";
             break;
+        default:
+            screen.src = "";
     }
 }
 

@@ -14,32 +14,29 @@
     border-right: none;
 }
 
-.steam-release > :where(h1, p) {
-    padding-left: 8%;
-    padding-right: 50%;
-}
-
-.steam-release > h2 {
-    padding-left: 8%;
-    padding-right: 55%;
-}
-
-.steam-release > h1 {
-    padding-top: 3%
+.steam-release-info {
+    margin: 3% 12% 5%;
+    display: inline-block;
 }
 
 .steam-release-section-header {
-    left: 8%
+    left: 12%
+}
+
+.trailer-container {
+    float: right;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    margin-top: 2.5%;
+}
+
+.mobile-trailer-container {
+    display: none;
 }
 
 .trailer {
-    width: 40%;
-    max-height: 70%;
+    width: 40vw;
     aspect-ratio: 16 / 9;
-
-    position: absolute;
-    right: 8%;
-    top: 18%;
 
     border:none;
     border-radius: 10px;
@@ -47,6 +44,16 @@
 
 .steam-icon {
     position: absolute;
-    right: 50%;
-    top: 18%;
+    right: 0;
+    top: 0;
+    padding-top: 5%;
+    padding-right: 51.5%;
+}
+
+.mobile-steam-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 5%;
+    padding-right: 12%;
 }

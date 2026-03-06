@@ -53,34 +53,28 @@
         height: 32px;
     }
 
-    .steam-release > :where(h1, p) {
-        padding-left: 12%;
-        padding-right: 12%;
+    .trailer-container {
+        display: none;
     }
 
-    .steam-release > h2 {
-        padding-left: 12%;
-        padding-right: 22%;
-    }
-
-    .steam-release > p {
-        margin-bottom: 47%;
-    }
-
-    .steam-release-section-header {
-        left: 12%;
+    .mobile-trailer-container {
+        display: inline;
     }
 
     .trailer {
-        width: 76%;
-        left: 12%;
-        bottom: 5%;
-        top: auto;
+        width: stretch;
+        margin: 3% 0;
     }
 
     .steam-icon {
         right: 10%;
         top: 5%;
+    }
+
+    .icons > div {
+        width: 80px;
+        height: 80px;
+        /*border-radius: 8px;*/
     }
 }
 
