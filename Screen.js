@@ -13,18 +13,20 @@ const _textScrollDownTime = 2;
 hoverCards.forEach((card) => {
     card.addEventListener("click", (ev) => {
         setDescription(card.parentElement.id);
-        enableScreen(card.getBoundingClientRect().top);
+        enableScreen(hoverCardsContainer.getBoundingClientRect().top);
         displayText();
-        setActiveGame(card.parentElement.id);
+        setTimeout(setActiveGame, 550, card.parentElement.id);
+        // setActiveGame(card.parentElement.id);
     });
 });
 
 gameJamTitles.forEach((title) => {
    title.addEventListener("click", (ev) => {
        setDescription(title.parentElement.id);
-       enableScreen(title.getBoundingClientRect().top - window.innerHeight / 3.5);
+       enableScreen(hoverCardsContainer.getBoundingClientRect().top - window.innerHeight / 3.5);
        displayText();
-       setActiveGame(title.parentElement.id)
+       setTimeout(setActiveGame, 550, title.parentElement.id);
+       // setActiveGame(title.parentElement.id)
    });
 });
 
@@ -52,12 +54,12 @@ function setActiveGame(gameID) {
 
 //#region coroutines
 
-function enableScreen(cardHeight) {
+function enableScreen(divHeight) {
 
     root.style.setProperty('--screen-display', 'inline');
 
     const startScroll = window.scrollY;
-    const scrollGoal = window.scrollY + cardHeight + (window.innerHeight / 2.6);
+    const scrollGoal = window.scrollY + divHeight + (window.innerHeight * 0.72);
 
     let timer = 0;
     const scrollDownScreen = setInterval(() => {
