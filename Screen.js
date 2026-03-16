@@ -33,7 +33,7 @@ gameJamTitles.forEach((title) => {
 function setActiveGame(gameID) {
     switch(gameID) {
         case "sswud":
-            screen.src = "./web-games/147/index.html";
+            screen.src = "./web-games/sswud/index.html";
             break;
         case "polaris":
             screen.src = "./web-games/polaris/index.html";
