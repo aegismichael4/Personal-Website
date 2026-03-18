@@ -21,17 +21,17 @@ hoverCards.forEach((card) => {
 });
 
 gameJamTitles.forEach((title) => {
-   title.addEventListener("click", (ev) => {
-       setDescription(title.parentElement.id);
-       enableScreen(hoverCardsContainer.getBoundingClientRect().top - window.innerHeight / 3.5);
-       displayText();
-       setTimeout(setActiveGame, 550, title.parentElement.id);
-       // setActiveGame(title.parentElement.id)
-   });
+    title.addEventListener("click", (ev) => {
+        setDescription(title.parentElement.id);
+        enableScreen(hoverCardsContainer.getBoundingClientRect().top - window.innerHeight / 3.5);
+        displayText();
+        setTimeout(setActiveGame, 550, title.parentElement.id);
+        // setActiveGame(title.parentElement.id)
+    });
 });
 
 function setActiveGame(gameID) {
-    switch(gameID) {
+    switch (gameID) {
         case "sswud":
             screen.src = "./web-games/sswud/index.html";
             break;
@@ -41,17 +41,22 @@ function setActiveGame(gameID) {
         case "tugboat-fishin":
             screen.src = "./web-games/tugboat-fishin/index.html";
             break;
+        case "roi":
+            screen.src = "https://itch.io/embed/3838003?linkback=true&amp;bg_color=1b1b1b&amp;fg_color=fdc6a7&amp;link_color=db050e&amp;border_color=4e4e4e";
+            break;
         case "slingstar":
             screen.src = "./web-games/slingstar/index.html";
             break;
         case "the-heist":
             screen.src = "https://aegismichael4.github.io/Final-Project-CMPM-120/";
             break;
+        case "middys-slimetastic-adventure":
+            screen.src = "https://www.youtube.com/embed/Euc5_varwXU?si=eioO43Fg0qNltpy3";
+            break;
         default:
             screen.src = "";
     }
 }
-
 //#region coroutines
 
 function enableScreen(divHeight) {
@@ -67,7 +72,7 @@ function enableScreen(divHeight) {
         timer += deltaTime;
         if (timer > _screenOpenTime) {
             screenShowing = true;
-            root.style.setProperty ('--screen-height', 'auto');
+            root.style.setProperty('--screen-height', 'auto');
             screen.style.setProperty("aspect-ratio", "16 / 9");
             clearInterval(scrollDownScreen);
 
@@ -78,7 +83,7 @@ function enableScreen(divHeight) {
         if (!screenShowing) {
             const goalHeight = Math.max(100, screen.clientWidth) * 9.0 / 16.0;
             const height = lerp(0, goalHeight, easeOutCubic(t));
-            root.style.setProperty ('--screen-height', `${height}px`);
+            root.style.setProperty('--screen-height', `${height}px`);
         }
 
         const newScroll = lerp(startScroll, scrollGoal, easeOutCubic(t));
@@ -91,7 +96,7 @@ function enableScreen(divHeight) {
 
 function displayText() {
 
-    if(textShowing) return;
+    if (textShowing) return;
     textShowing = true;
 
     gameJamInfo.style.setProperty("display", "block");
@@ -108,7 +113,7 @@ function displayText() {
             clearInterval(scrollDownText);
         }
 
-        let t = lerp(0, 1, easeOutSine( timer / _textScrollDownTime));
+        let t = lerp(0, 1, easeOutSine(timer / _textScrollDownTime));
 
         let newY = lerp(startY, 0, t);
         gameJamInfo.style.setProperty("transform", `translateY(${newY}px)`);

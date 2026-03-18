@@ -128,8 +128,39 @@ function createData() {
         "finished the game for a grand total of $5. It was awesome.",
         ["img/screenshots/the-heist/1.png", "img/screenshots/the-heist/2.png", "img/screenshots/the-heist/3.png"],
         "CMPM 120 ⭑ May 2025",
-        "",
+        "https://aegismichael4.github.io/Final-Project-CMPM-120/",
         "https://aegismichael4.github.io/Final-Project-CMPM-120/"
+    ));
+
+    data.push(new GameJamData(
+        "middys-slimetastic-adventure",
+        "Middy's Slimetastic Adventure",
+        "Solo Development",
+        "This game represents a major step forwards for me in terms of engineering. I made Middy's Slimetastic Adventure as my " +
+        "final project for a procedural generation class, which placed heavy emphasis on making and using procedural tools. One of my peers, " +
+        "Tate Maguire, made an awesome MIDI file generator with lots of parameters, which he called the DrumBreakGenerator--you can find it " +
+        "on tatemaguire.games! I felt really inspired by it, and wanted to take a stab at a rhythm game with procedurally generating music." +
+        "<br><br>" +
+        "This project started with a whole lot of research. Tate's DrumBreakGenerator is written in c++, which I knew in theory was usable " +
+        "in my engine of choice, Unity, but I'd never tried making a plugin before and didn't know where to start. Though it was a long, long " +
+        "process, I eventually figured out how to compile the project into a DLL file and successfully bridge the gap between c++ and c# to " +
+        "reference Tate's code and generate a MIDI file at runtime, directly from the Unity application. From there, after even more research " +
+        "and a failed attempt, I landed on Thunk Monkey's Fluid MIDI Player plugin to play the files I was generating. The final major engineering " +
+        "hurdle was modifying Tate's code to return data back to my program on when each note starts, which I combined with the Fluid MIDI " +
+        "Player's tick tracking, to successfully time inputs to the beat." +
+        "<br><br>" +
+        "Finally, with a strong rhythm game engineering foundation, I was ready to start making something playable. To keep the complexity and difficulty " +
+        "within reason, I settled on a simple character controller, mouse to aim, and the two mouse buttons to use two different attacks--left click is " +
+        "synced with the kick drum and right click the snare. Being myself, I placed a heavy emphasis on animating striking vfx with Aseprite, something I " +
+        "hadn't had the chance to do since I made Super Space Whalez Ultra Deluxe, nearly a year prior. My main gameplay hook, outside the moment-to-moment " +
+        "of timing your inputs to the generated beat, is that the weapons can be swapped with loot dropped from enemies, which both change the shape, damage, " +
+        "and knockback of the weapon as well as the sound of its respective drum. To tie everything together, I used a simple roguelike loop, where you're " +
+        "free to explore in any direction, the goal is to clear as many rooms as possible, and death means restarting completely.",
+        ["img/screenshots/middys-slimetastic-adventure/1.png", "img/screenshots/middys-slimetastic-adventure/2.png", "img/screenshots/middys-slimetastic-adventure/3.png",
+            "img/screenshots/middys-slimetastic-adventure/4.png"],
+        "CMPM 147 ⭑ March 2026",
+        "https://aegishehe.itch.io/middys-slimetastic-adventure",
+        "https://aegishehe.itch.io/middys-slimetastic-adventure"
     ));
 }
 createData();
