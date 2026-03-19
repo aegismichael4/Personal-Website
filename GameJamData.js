@@ -155,7 +155,13 @@ function createData() {
         "hadn't had the chance to do since I made Super Space Whalez Ultra Deluxe, nearly a year prior. My main gameplay hook, outside the moment-to-moment " +
         "of timing your inputs to the generated beat, is that the weapons can be swapped with loot dropped from enemies, which both change the shape, damage, " +
         "and knockback of the weapon as well as the sound of its respective drum. To tie everything together, I used a simple roguelike loop, where you're " +
-        "free to explore in any direction, the goal is to clear as many rooms as possible, and death means restarting completely.",
+        "free to explore in any direction, the goal is to clear as many rooms as possible, and death means restarting completely." +
+        "<br><br>" +
+        "Ultimately, I think what went smoothest in this project was the tried-and-true pixel art vfx. I really enjoyed the opportunity to work on them " +
+        "again, and I'd like to again soon. Though I'm really proud of myself for getting it working at all, I think the MIDI generation and playback " +
+        "was the biggest bump, especially given that I was only able to get it working on Windows and only on about two thirds of the Windows computers " +
+        "we playtested with. If I had more time for this project, I'd definitely want to try to find a solution for that problem, and put more time and " +
+        "care into the level design, progression, and juice.",
         ["img/screenshots/middys-slimetastic-adventure/1.png", "img/screenshots/middys-slimetastic-adventure/2.png", "img/screenshots/middys-slimetastic-adventure/3.png",
             "img/screenshots/middys-slimetastic-adventure/4.png"],
         "CMPM 147 ⭑ March 2026",
