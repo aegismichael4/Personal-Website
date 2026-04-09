@@ -72,10 +72,23 @@ body {
     /*background-color: white;*/
 }
 
+.scroll-buttons {
+    display: inline-flex;
+    gap: 3%;
+    flex-wrap: wrap;
+    width: 97%;
+    justify-content: right;
+}
+
+.scroll-buttons > h3 {
+    /*width: 100%;*/
+    margin-top: 0;
+}
+
 .header-img {
     width: 85%;
     height: auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .header > h1 {

@@ -14,6 +14,14 @@
 <body>
 
     <div class="header">
+
+        <div class="scroll-buttons" id="scroll-buttons">
+            <h3>About Me</h3>
+            <h3>Steam Release</h3>
+            <h3>Other Games</h3>
+            <h3>Blog Posts</h3>
+        </div>
+
         <img class="header-img" src="img/headers/header.png" alt="Header" draggable="false">
 
         <div class="icons header-icons">
@@ -51,7 +59,7 @@
         <div class="area-fill area-contrast"></div>
 
         <img class ="pfp" src="img/icons/pfp.png" alt="About me" draggable="false">
-        <img class ="section-header" src="img/headers/section-header-about-me.png" alt="Picture of me!" draggable="false">
+        <img class ="section-header" id="about-me-scroll-to" src="img/headers/section-header-about-me.png" alt="Picture of me!" draggable="false">
 
         <h1>Aegis Michael</h1>
         <h2>UC Santa Cruz ⭑ Computer Science: Computer Game Design B.S.</h2>
@@ -91,7 +99,7 @@
         <div class="steam-area-fill area-color"></div>
         <div class="steam-area-fill area-contrast"></div>
 
-        <img class ="section-header steam-release-section-header" src="img/headers/section-header-steam-release.png" alt="Steam release" draggable="false">
+        <img class ="section-header steam-release-section-header" id="steam-release-scroll-to" src="img/headers/section-header-steam-release.png" alt="Steam release" draggable="false">
 
         <div class="steam-release-info">
 
@@ -145,7 +153,7 @@
         <div class="steam-area-fill area-color"></div>
         <div class="steam-area-fill area-contrast"></div>
 
-        <img class ="section-header game-jams-section-header" src="img/headers/section-header-game-jams.png" alt="Steam release" draggable="false">
+        <img class ="section-header game-jams-section-header" id="game-jams-scroll-to" src="img/headers/section-header-game-jams.png" alt="Steam release" draggable="false">
 
         <div id="hover-cards" class="game-jams-container">
             <div id="sswud">
@@ -233,7 +241,21 @@
 
         </div>
 
+    </div>
 
+    <div class="area blog-posts">
+        <div class="steam-area-fill area-color"></div>
+        <div class="steam-area-fill area-contrast"></div>
+
+        <img class ="section-header blog-posts-section-header" id="blog-posts-scroll-to" src="img/headers/section-header-blog-posts.png" alt="Blog Posts" draggable="false">
+
+        <div id="blog-hover-cards" class="game-jams-container">
+            <div id="star-generator">
+                <img class="card-hover" src="img/cards/card-sswud.png" alt="Card for the star generator blog post" draggable="false">
+                <h3>SteamID-Based Star Texture Generator</h3>
+                <a class="game-jam-link" href="https://itch.io/jam/jame-gam-50" target="_blank" draggable="false">stardozing</a>
+            </div>
+        </div>
     </div>
 
     <script src="CardHover.js"></script>
@@ -241,7 +263,8 @@
     <script src="Carousel.js"></script>
     <script src="GameJamData.js"></script>
     <script src="Tick.js"></script>
-
+    <script src="ScrollButtons.js"></script>
+    <script src="BlogPosts.js"></script>
 
 </body>
 

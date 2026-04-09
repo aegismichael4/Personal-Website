@@ -1,0 +1,13 @@
+.blog {
+    width: 100%;
+    height: 100%;
+}
+
+.blog > :where(h1, h2, p) {
+    padding-left: 7%;
+    padding-right: 35%;
+}
+
+.blog > h1 {
+    padding-top: 3%;
+}
