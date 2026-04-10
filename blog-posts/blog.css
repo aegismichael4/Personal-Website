@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     display: none;
+    padding-bottom: 7%;
 }
 
 .blog > :where(h1, h2, p) {
