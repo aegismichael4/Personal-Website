@@ -13,3 +13,15 @@
     padding-top: 3%;
     padding-bottom: 5%
 }
+
+.blog > h2 {
+    margin-bottom: 0;
+}
+
+.blog > p {
+    margin: 10px 0;
+}
+
+.blog > img {
+    margin: 20px 0;
+}
