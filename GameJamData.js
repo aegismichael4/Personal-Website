@@ -168,6 +168,28 @@ function createData() {
         "https://aegishehe.itch.io/middys-slimetastic-adventure",
         "https://aegishehe.itch.io/middys-slimetastic-adventure"
     ));
+
+    data.push(new GameJamData(
+        "stardozing",
+        "stardozing",
+        "project stardozing: Technical Artist ⭑ Technical Designer ⭑ Network Engineer ⭑ 3D Generalist",
+        "stardozing is an online multiplayer 'friendlop' game about cave diving in alien worlds to find a place to hibernate, where you can pick up " +
+        "and throw the things you find around you, including your friends! It's been an absolute blast to work on so far, and we all have so many ideas to " +
+        "keep development going. This project started as a submission to the Unlikely Collaborators Game Jam, but with such a fun premise and initial development " +
+        "period, the team has decided to keep working on it as our capstone project in our senior year at UCSC." +
+        "<br><br>" +
+        "As an online multiplayer game, there was already a large hurdle for us to clear to even begin development. I took the lead with setting up our networking " +
+        "solution--Fishnet. With the ultimate goal of releasing on Steam, I also set up our game with Facepunch.Steamworks to handle peer-to-peer connections, " +
+        "allowing us to play together through Steam's servers. Though it was an enourmous initial undertaking to do before even being able to start developing the " +
+        "game, I'm glad that I decided to tackle it early, as the team has since encountered that game development is more complex with an online game." +
+        "<br><br>" +
+        "Though we were only able to set up the very core systems for the jam (online hosting, a simple character controller, picking up and throwing items and " +
+        "friends), we have so many ideas and plans for the future, and are continuing development in earnest. I'm very excited to keep at it!",
+        ["img/screenshots/stardozing/1.png", "img/screenshots/stardozing/2.png", "img/screenshots/stardozing/3.png", "img/screenshots/stardozing/4.png"],
+        "Unlikely Collaborators ⭑ March-April 2026",
+        "https://itch.io/jam/ucgamejam2026",
+        "https://aminisofia.itch.io/stardozing"
+    ));
 }
 createData();
 

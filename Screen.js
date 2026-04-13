@@ -53,6 +53,9 @@ function setActiveGame(gameID) {
         case "middys-slimetastic-adventure":
             screen.src = "https://www.youtube.com/embed/Euc5_varwXU?si=eioO43Fg0qNltpy3";
             break;
+        case "stardozing":
+            screen.src = "https://itch.io/embed/4433585";
+            break;
         default:
             screen.src = "";
     }
