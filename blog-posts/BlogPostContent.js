@@ -6,3 +6,8 @@ const blogID = urlParams.get('blog');
 
 console.log(blogID);
 document.getElementById(blogID).style.display = 'block';
+
+const homeButton = document.getElementById("home-button");
+homeButton.addEventListener("click", () => {
+    window.location.href = `../index.html`;
+});
