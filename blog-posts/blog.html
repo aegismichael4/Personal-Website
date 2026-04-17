@@ -10,11 +10,21 @@
 </head>
 <body>
 
-  <div class="header">
-    <img class="header-img" src="../img/headers/header.png" alt="Header" draggable="false">
-  </div>
+    <div id="up-arrows" class="hidden-arrows">
+        <img id="up-arrow-one" class="up-arrow-one" src="../img/icons/up-arrow.png" alt="Up Arrow">
+        <img id="up-arrow-two" class="up-arrow-two" src="../img/icons/up-arrow.png" alt="Up Arrow">
+        <img id="up-arrow-three" class="up-arrow-three" src="../img/icons/up-arrow.png" alt="Up Arrow">
+    </div>
 
-  <div class="area">
+<!--    <div id="back-arrow" class="back-arrow">-->
+<!--        <img src="../img/icons/up-arrow.png" alt="Back arrow">-->
+<!--    </div>-->
+
+    <div class="header">
+    <img class="header-img" src="../img/headers/header.png" alt="Header" draggable="false">
+    </div>
+
+    <div class="area">
     <div class="area-fill area-color"></div>
     <div class="area-fill area-contrast"></div>
 
@@ -27,7 +37,7 @@
             I'm currently working on a 3D "friendslop" game called stardozing. In this game, you play as a little
             star-bellied catbear, which looks a little something like this.
         </p>
-        <img src="./img/star-generator/catbear-model.png" alt="Catbear">
+        <img src="./img/star-generator/01-catbear-model.png" alt="Catbear" style="width: 20%">
         <p>
             We knew pretty early that we wanted them to be customizable, as we're hoping to support players in
             building a connection to their character and differentiate themselves from their friends, and
@@ -40,17 +50,44 @@
             <br><br>
             Here's a little snippet from our developer board.
         </p>
-        <img src="./img/star-generator/concept.png" alt="Concept for star designs" style="width:60%">
+        <img src="./img/star-generator/02-concept.png" alt="Concept for star designs">
+
+        <h2>The Process</h2>
+
+        <p>
+            Knowing I planned to use vertex displacement to make some funky star shapes, the first thing I did
+            was hop into Blender and model some stars, making an object for four through eleven pointed stars.
+        </p>
+        <img src="./img/star-generator/03-blender-stars.png" alt="Blender stars">
+
+        <p>
+            Bringing them into Unity, I set up a little scene with a camera rendering to a render texture. Later on,
+            I plan to make a copy of this texture on the actual catbear. For now, it just looks like we're about to
+            listen to the Stone Temple Pilots.
+        </p>
+        <img src="./img/star-generator/04-render-texture-setup.png" alt="Unity scene setup">
+
+        <p>
+            Moving on, I set up a little shader that takes in an integer "seed" value, as well as two configurable
+            parameters for the noise scale and offset, to displace each vertex of the star based on the seed input.
+        </p>
+        <img src="./img/star-generator/05-star-deformation.gif" alt="Star deformation">
+
+        <p>
+            Next, I used the seed to randomly determine which star to activate. At this point, I realized that eight
+            through eleven pointed stars look pretty awkward when randomly displaced, so I excluded them for now.
+        </p>
+        <img src="./img/star-generator/06-random-point-plus-deformation.gif" alt="Star deformation plus random selection">
     </div>
 
     <div class="blog" id="something-else">
         <h1>IM FAKE AND NOT REAL</h1>
     </div>
 
-  </div>
+    </div>
 
-  <script src="BlogPostContent.js"></script>
-
+    <script src="BlogPostContent.js"></script>
+    <script src="../UpArrow.js"></script>
 
 </body>
 </html>
