@@ -150,3 +150,8 @@
     transition: all .2s ease;
 
 }
+
+.blog-posts {
+    padding-top: 7%;
+    margin-bottom: 3%;
+}
