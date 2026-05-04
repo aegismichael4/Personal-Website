@@ -1,8 +1,11 @@
 const screen = document.getElementById("screen");
 const gameJamInfo = document.getElementById("game-jam-info");
 
+const hoverCardsContainer = document.getElementById("hover-cards-2"); // should be last one
 
-const gameJamTitles = hoverCardsContainer.querySelectorAll("h3");
+const gjt1 = document.getElementById("hover-cards-1").querySelectorAll("h3");
+const gjt2 = document.getElementById("hover-cards-2").querySelectorAll("h3");
+const gameJamTitles = Array.from(gjt1).concat(Array.from(gjt2));
 
 let screenShowing = false;
 let textShowing = false;
@@ -67,7 +70,7 @@ function enableScreen(divHeight) {
     root.style.setProperty('--screen-display', 'inline');
 
     const startScroll = window.scrollY;
-    const scrollGoal = window.scrollY + divHeight + (window.innerHeight * 0.72);
+    const scrollGoal = window.scrollY + divHeight + (window.innerHeight * 0.4);
 
     let timer = 0;
     const scrollDownScreen = setInterval(() => {

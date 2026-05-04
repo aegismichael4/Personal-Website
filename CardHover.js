@@ -2,8 +2,9 @@ const hoverEffectIntensity = 20;
 
 const root = document.documentElement;
 
-const hoverCardsContainer = document.getElementById("hover-cards");
-const hoverCards = hoverCardsContainer.querySelectorAll("img");
+const hc1 = document.getElementById("hover-cards-1").querySelectorAll("img");
+const hc2 = document.getElementById("hover-cards-2").querySelectorAll("img");
+const hoverCards = Array.from(hc1).concat(Array.from(hc2));
 
 const blogHoverCardsContainer = document.getElementById("blog-hover-cards");
 const blogHoverCards = blogHoverCardsContainer.querySelectorAll("img");

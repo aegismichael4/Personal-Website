@@ -1,12 +1,20 @@
 .game-jams {
     margin-bottom: 50px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.game-jams > h1 {
+    padding-top: 0;
+    padding-left:7%;
+    margin-top: 0;
 }
 
 .game-jams-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
-    margin: 8% 7% 5%;
+    margin: 1% 7% 3%;
     gap: 2%;
 }
 
