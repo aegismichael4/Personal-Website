@@ -13,12 +13,26 @@
 
 <body>
 
+    <div id="up-arrows" class="hidden-arrows">
+        <img id="up-arrow-one" class="up-arrow-one" src="img/icons/up-arrow.png" alt="Up Arrow">
+        <img id="up-arrow-two" class="up-arrow-two" src="img/icons/up-arrow.png" alt="Up Arrow">
+        <img id="up-arrow-three" class="up-arrow-three" src="img/icons/up-arrow.png" alt="Up Arrow">
+    </div>
+
     <div class="header">
+
+        <div class="scroll-buttons" id="scroll-buttons">
+            <h3>About Me</h3>
+            <h3>Steam Release</h3>
+            <h3>Other Projects</h3>
+            <h3>Blog Posts</h3>
+        </div>
+
         <img class="header-img" src="img/headers/header.png" alt="Header" draggable="false">
 
         <div class="icons header-icons">
             <div id="linkedin">
-                <a href="https://www.linkedin.com/in/aegis-michael-457a69219/" target="_blank" draggable="false">
+                <a href="https://www.linkedin.com/in/aegis-michael/" target="_blank" draggable="false">
                     <img src="img/icons/icon-linkedin.svg" alt="Icon for LinkedIn" draggable="false">
                 </a>
             </div>
@@ -43,7 +57,7 @@
                 </a>
             </div>
         </div>
-        <h1>Game Designer ⭑ Technical Artist ⭑ Programmer</h1>
+        <h1>Technical Designer ⭑ Technical Artist</h1>
     </div>
 
     <div class="area about-me">
@@ -51,7 +65,7 @@
         <div class="area-fill area-contrast"></div>
 
         <img class ="pfp" src="img/icons/pfp.png" alt="About me" draggable="false">
-        <img class ="section-header" src="img/headers/section-header-about-me.png" alt="Picture of me!" draggable="false">
+        <img class ="section-header" id="about-me-scroll-to" src="img/headers/section-header-about-me.png" alt="Picture of me!" draggable="false">
 
         <h1>Aegis Michael</h1>
         <h2>UC Santa Cruz ⭑ Computer Science: Computer Game Design B.S.</h2>
@@ -91,7 +105,7 @@
         <div class="steam-area-fill area-color"></div>
         <div class="steam-area-fill area-contrast"></div>
 
-        <img class ="section-header steam-release-section-header" src="img/headers/section-header-steam-release.png" alt="Steam release" draggable="false">
+        <img class ="section-header steam-release-section-header" id="steam-release-scroll-to" src="img/headers/section-header-steam-release.png" alt="Steam release" draggable="false">
 
         <div class="steam-release-info">
 
@@ -112,18 +126,22 @@
             <h2>Studio Verdigris: Lead Designer ⭑ Technical Artist</h2>
             <p>
                 Eltanin is a physics-based puzzle game about arranging planets to guide a young star to his destined place in the cosmos.
-                Taking place over 37 levels across 5 different constellations, it has a heavy focus on mastering the subtleties of the physics
-                systems, iteration on your path, timing, and--above all--creativity.
+                Taking place over 37 levels, it has a heavy focus on mastering the subtleties of the physics
+                systems, iterating on your path, timing, and--above all--creativity.
                 <br><br>
                 Eltanin got its start with a game jam win, during the 2025 Uni Jam. With such a promising core gameplay loop and too many ideas
-                worth exploring to put it down, my teammates and I  soon picked back up development as Studio Verdigris with small goals for polishing it up enough to be worthy
-                of our ultimate goal: a Steam release. As we worked, though, and the ideas kept coming, we continued to set our visions higher
-                and push ourselves even further to create something we could truly be proud of. With my blossoming love of the polishing and
-                quality assurance process, my growing interest and skills in technical art and VFX, and my genuine attachment to the project,
-                I'm proud to say as the Lead Designer of Eltanin that we brought the game into its own league, rendering the original game jam
-                version nearly unplayable in comparison.
+                worth exploring to put it down, my teammates and I soon picked back up development as Studio Verdigris with plans to expand and polish it enough to be worthy
+                of our ultimate goal: a Steam release.
                 <br><br>
-                Eltanin has sincerely been a joy to work on, and I couldn't (well, could hardly) be prouder of how it came out.
+                As the Lead Designer and Technical Artist for Eltanin, I took charge in designing our core gameplay systems, designing and iterating on the vast majority
+                of the game's levels, mocking up and implementing UI, juicing up the game with animations and particle effects, and writing shaders for gravity, lighting, and
+                the wormhole. We put a massive focus on polish and quality assurance with Eltanin, having held more than 30 total playtests throughout the duration of the project,
+                and I'm sincerely very proud of how it came out!
+<!--                With my blossoming love of the polishing and the quality assurance process, my growing interest and skills in technical art and VFX,-->
+<!--                and my genuine attachment to the project, I'm proud to say as the Lead Designer of Eltanin that we brought the game into its own league,-->
+<!--                rendering the original game jam version nearly unplayable in comparison.-->
+<!--                <br><br>-->
+<!--                Eltanin has sincerely been a joy to work on, and I couldn't (well, could hardly) be prouder of how it came out.-->
             </p>
 
             <div class="mobile-trailer-container">
@@ -145,9 +163,11 @@
         <div class="steam-area-fill area-color"></div>
         <div class="steam-area-fill area-contrast"></div>
 
-        <img class ="section-header game-jams-section-header" src="img/headers/section-header-game-jams.png" alt="Steam release" draggable="false">
+        <img class ="section-header game-jams-section-header" id="game-jams-scroll-to" src="img/headers/section-header-other-projects.png" alt="Steam release" draggable="false">
 
-        <div id="hover-cards" class="game-jams-container">
+        <h1>Game Jams</h1>
+        <div id="hover-cards-1" class="game-jams-container">
+
             <div id="sswud">
                 <img class="card-hover" src="img/cards/card-sswud.png" alt="Card for Super Space Whalez Ulta Deluxe" draggable="false">
                 <h3>S.S.W.U.D.</h3>
@@ -177,15 +197,31 @@
                 <h3>Slingstar</h3>
                 <a class="game-jam-link" href="https://itch.io/jam/international-college-jam-6" target="_blank" draggable="false">International College Jam 6</a>
             </div>
+
+            <div id="stardozing">
+                <img src="img/cards/card-stardozing.jpg" alt="Card for stardozing" draggable="false">
+                <h3>stardozing</h3>
+                <a class="game-jam-link" href="https://itch.io/jam/ucgamejam2026" target="_blank" draggable="false">Unlikely Collaborators Game Jam</a>
+            </div>
+        </div>
+
+        <h1>Class Projects</h1>
+        <div id="hover-cards-2" class="game-jams-container">
+
             <div id="the-heist">
                 <img src="img/cards/card-the-heist.png" alt="Card for The Heist" draggable="false">
                 <h3>The Heist</h3>
-                <a class="game-jam-link">CMPM 120</a>
+                <a class="game-jam-link">Game - CMPM 120</a>
             </div>
             <div id="middys-slimetastic-adventure">
                 <img src="img/cards/card-middys-slimetastic-adventure.png" alt="Card for Middy's Slimetastic Adventure" draggable="false">
                 <h3>Middy's Slimetastic Adventure</h3>
-                <a class="game-jam-link">CMPM 147</a>
+                <a class="game-jam-link">Game - CMPM 147</a>
+            </div>
+            <div id="anabelle">
+                <img src="img/cards/card-anabelle.png" alt="Card for Anabelle" draggable="false">
+                <h3>Anabelle</h3>
+                <a class="game-jam-link">3D Model - ARTG 118</a>
             </div>
         </div>
 
@@ -233,15 +269,39 @@
 
         </div>
 
-
     </div>
+
+    <div class="area blog-posts">
+        <div class="steam-area-fill area-color"></div>
+        <div class="steam-area-fill area-contrast"></div>
+
+        <img class ="section-header blog-posts-section-header" id="blog-posts-scroll-to" src="img/headers/section-header-blog-posts.png" alt="Blog Posts" draggable="false">
+
+        <div id="blog-hover-cards" class="game-jams-container">
+            <div id="stardozing-star-generator">
+                <img class="card-hover" src="img/cards/card-star-generator.gif" alt="Card for the star generator blog post" draggable="false">
+                <h3>SteamID-Based Star Texture Generator</h3>
+                <a class="game-jam-link" href="https://aminisofia.itch.io/stardozing" target="_blank" draggable="false">stardozing</a>
+            </div>
+
+<!--            <div id="stardozing-procedural-generation">-->
+<!--                <img class="card-hover" src="img/cards/card-sswud.png" alt="Card for the star generator blog post" draggable="false">-->
+<!--                <h3>Procedural Generation</h3>-->
+<!--                <a class="game-jam-link" href="https://aminisofia.itch.io/stardozing" target="_blank" draggable="false">stardozing</a>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+
 
     <script src="CardHover.js"></script>
     <script src="Screen.js"></script>
     <script src="Carousel.js"></script>
     <script src="GameJamData.js"></script>
     <script src="Tick.js"></script>
-
+    <script src="ScrollButtons.js"></script>
+    <script src="BlogPostButtons.js"></script>
+    <script src="UpArrow.js"></script>
 
 </body>
 

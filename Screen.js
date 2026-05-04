@@ -1,8 +1,11 @@
 const screen = document.getElementById("screen");
 const gameJamInfo = document.getElementById("game-jam-info");
 
+const hoverCardsContainer = document.getElementById("hover-cards-2"); // should be last one
 
-const gameJamTitles = hoverCardsContainer.querySelectorAll("h3");
+const gjt1 = document.getElementById("hover-cards-1").querySelectorAll("h3");
+const gjt2 = document.getElementById("hover-cards-2").querySelectorAll("h3");
+const gameJamTitles = Array.from(gjt1).concat(Array.from(gjt2));
 
 let screenShowing = false;
 let textShowing = false;
@@ -23,7 +26,7 @@ hoverCards.forEach((card) => {
 gameJamTitles.forEach((title) => {
     title.addEventListener("click", (ev) => {
         setDescription(title.parentElement.id);
-        enableScreen(hoverCardsContainer.getBoundingClientRect().top - window.innerHeight / 3.5);
+        enableScreen(hoverCardsContainer.getBoundingClientRect().top);
         displayText();
         setTimeout(setActiveGame, 550, title.parentElement.id);
         // setActiveGame(title.parentElement.id)
@@ -53,6 +56,12 @@ function setActiveGame(gameID) {
         case "middys-slimetastic-adventure":
             screen.src = "https://www.youtube.com/embed/Euc5_varwXU?si=eioO43Fg0qNltpy3";
             break;
+        case "stardozing":
+            screen.src = "https://itch.io/embed/4433585";
+            break;
+        case "anabelle":
+            screen.src = "https://sketchfab.com/models/4e5ce8f6053d4d77a4d96214792dd336/embed";
+            break;
         default:
             screen.src = "";
     }
@@ -64,7 +73,7 @@ function enableScreen(divHeight) {
     root.style.setProperty('--screen-display', 'inline');
 
     const startScroll = window.scrollY;
-    const scrollGoal = window.scrollY + divHeight + (window.innerHeight * 0.72);
+    const scrollGoal = window.scrollY + divHeight + (window.innerHeight * 0.4);
 
     let timer = 0;
     const scrollDownScreen = setInterval(() => {
