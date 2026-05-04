@@ -128,7 +128,7 @@ function createData() {
         "finished the game for a grand total of $5. It was awesome.",
         ["img/screenshots/the-heist/1.png", "img/screenshots/the-heist/2.png", "img/screenshots/the-heist/3.png"],
         "CMPM 120 ⭑ May 2025",
-        "https://aegismichael4.github.io/Final-Project-CMPM-120/",
+        "https://catalog.ucsc.edu/en/2024-2025/general-catalog/courses/cmpm-computational-media/upper-division/cmpm-120",
         "https://aegismichael4.github.io/Final-Project-CMPM-120/"
     ));
 
@@ -165,7 +165,7 @@ function createData() {
         ["img/screenshots/middys-slimetastic-adventure/1.png", "img/screenshots/middys-slimetastic-adventure/2.png", "img/screenshots/middys-slimetastic-adventure/3.png",
             "img/screenshots/middys-slimetastic-adventure/4.png"],
         "CMPM 147 ⭑ March 2026",
-        "https://aegishehe.itch.io/middys-slimetastic-adventure",
+        "https://catalog.ucsc.edu/en/current/general-catalog/courses/cmpm-computational-media/upper-division/cmpm-147",
         "https://aegishehe.itch.io/middys-slimetastic-adventure"
     ));
 
@@ -203,9 +203,9 @@ function createData() {
         "This is my character: Anabelle. She's a zombie who fights other zombies, hence all the bite marks. While working on her, I was feeling particularly inspired " +
         "by Nu Metal music and fashion, so I imagine she died a metalhead.",
         ["img/screenshots/anabelle/1.png", "img/screenshots/anabelle/2.png", "img/screenshots/anabelle/3.png", "img/screenshots/anabelle/4.png", "img/screenshots/anabelle/5.gif"],
-        "Unlikely Collaborators ⭑ March-April 2026",
-        "https://itch.io/jam/ucgamejam2026",
-        "https://aminisofia.itch.io/stardozing"
+        "ARTG 118 ⭑ Summer 2025",
+        "https://catalog.ucsc.edu/en/current/general-catalog/courses/artg-art-and-design-games-and-playable-media/100/artg-118",
+        "https://aegishehe.itch.io/anabelle"
     ));
 }
 createData();
