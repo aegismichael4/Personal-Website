@@ -194,10 +194,11 @@ function createData() {
     data.push(new GameJamData(
         "anabelle",
         "Anabelle",
-        "3D Character",
+        "3D Character ⭑ Blender & Substance 3D Painter",
         "Going into the summer of 2025, I wanted to take full advantage of my UCSC standing to branch out into the 3D world, so I signed up for what would become " +
         "one of my favorite classes (as well as, fun fact, the only college-level art class I've ever taken)--ARTG 118: Character Creation for Video Games. The course " +
-        "covered in broad strokes the entire 3D character pipeline: ideating, sketching, box modeling, sculpting, retopology, hair, uv unwrapping, texturing, rigging, " +
+        "covered in broad strokes the entire 3D character pipeline in Blender and Adobe Substance 3D Painter: ideating, sketching, box modeling, sculpting, retopology, " +
+        "hair, uv unwrapping, texturing, rigging, " +
         "and animating. I'm incredibly thankful for the skill set that I was able to build during this class as I move in the direction of 3D game development!" +
         "<br><br>" +
         "This is my character: Anabelle. She's a zombie who fights other zombies, hence all the bite marks. While working on her, I was feeling particularly inspired " +
