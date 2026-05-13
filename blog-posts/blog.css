@@ -30,6 +30,16 @@
     margin: 0;
 }
 
+/*used for image credits*/
+h6 {
+    font-family: "lora";
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -1%;
+}
+
 .blog > p {
     margin: 10px 0;
 }
@@ -51,4 +61,17 @@
 
 .back-arrow > img {
     transform: rotate(-90deg);
+}
+
+.double-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+
+    padding: 0 20%;
+    margin: 20px 0;
+}
+
+.double-image > img {
+    width: 100%;
 }

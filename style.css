@@ -65,6 +65,22 @@ p {
     color: white;
 }
 
+a:link {
+    color: #8992f5;
+}
+
+a:visited {
+    color: #3C47C8;
+}
+
+a:hover {
+    color: #aab0fa;
+}
+
+a:active {
+    color: #e0e3ff;
+}
+
 body {
     background-image: url("img/backgrounds/bg3.jpg");
     background-repeat: no-repeat;
@@ -100,6 +116,7 @@ body {
 .scroll-buttons > h3 {
     /*width: 100%;*/
     margin-top: 0;
+    padding-top: 0.5%;
 }
 
 .header-img {
