@@ -65,19 +65,19 @@ p {
     color: white;
 }
 
-a:link {
+p > a:link, h6 > a:link {
     color: #8992f5;
 }
 
-a:visited {
+p > a:visited, h6 > a:visited {
     color: #3C47C8;
 }
 
-a:hover {
+p > a:hover, h6 > a:hover {
     color: #aab0fa;
 }
 
-a:active {
+p > a:active, h6 > a:active {
     color: #e0e3ff;
 }
 

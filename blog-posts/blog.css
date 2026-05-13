@@ -31,7 +31,7 @@
 }
 
 /*used for image credits*/
-h6 {
+.blog > h6, .double-image > h6 {
     font-family: "lora";
     color: white;
     font-weight: bold;

@@ -97,20 +97,12 @@
 
         <h2>Why Procedural Generation?</h2>
         <p>
-<<<<<<< Updated upstream
-            I'm currently a technical designer on stardozing, a 3D multiplayer 'friendslop' game about cave diving and
-            throwing your friends around! As we ideated the game and analyzed others of the same genre, we noted that
-            procedural generation would be an absolute necessity for our game. Taking after others like Peak and Lethal
-            Company, map generation paired with player interaction are the two driving forces for gameplay variety and
-            replayability. 
-=======
             I'm currently a Technical Designer on stardozing, a 3D multiplayer 'friendslop' game about cave diving and throwing your friends around! As we ideated the
             game and analyzed others of the same genre as we were getting started, we noted that procedural generation would be an absolute necessity for our game.
             <br><br>
             Taking after games like Peak and Lethal Company, map generation, paired with player interaction, are the two primary driving forces for gameplay variety and
             replayability. We began development with this notion, and a great cave aesthetic/composition moodboard put together by our creative director,
             <a href="https://www.sofiaminifard.com/" target="_blank">Sofia Aminifard</a>.
->>>>>>> Stashed changes
         </p>
         <img src="./img/procedural-cave-generator/01-miro.png" alt="Cave Generation in our miro board" draggable="false">
 
@@ -140,7 +132,7 @@
             We don’t want to keep players waiting!
         </p>
 
-        <h2>Generation Goals</h2>
+        <h2>The Idea</h2>
         <p>
             With our goals in mind, I began researching and ideating potential approaches to procedural map generation. My mind initially went to
             the true classic for terrain generation: using layered noise for a height map. I quickly ruled that out for the fatal flaw in that caves
@@ -148,7 +140,6 @@
         </p>
         <img src="./img/procedural-cave-generator/02-perlin-terrain.png" alt="Perlin noise based terrain generation" draggable="false">
         <h6>Source: <a href="https://www.redblobgames.com/maps/terrain-from-noise/" target="_blank">Red Blob Games</a></h6>
-
         <p>
             That line of reasoning (and research) led me to my next potential idea: subtraction in a voxel grid to carve out a cave, paired with marching
             cubes triangulation to generate the actual playable space. This had some distinct advantages—subtractive generation seems to closely mirror
@@ -158,12 +149,12 @@
             <img src="./img/procedural-cave-generator/04-minecraft-cave.jpg" alt="Minecraft cave" draggable="false">
             <img src="./img/procedural-cave-generator/03-voxel-triangulation.webp" alt="Marching cubes triangulation" draggable="false">
             <h6>Source: Mojang Studios</h6>
-            <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey on Implicit Surface Polygonization</a></h6>
+            <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey
+                on Implicit Surface Polygonization</a></h6>
         </div>
         <p>
-            My main problem with that idea was that,
-            honestly, I’ve never worked with voxel grids or runtime mesh generation, and this project, while super fun, seemed at least intermediate in
-            these fields and I wasn’t confident I could deliver for my team on time. So, back to the drawing board.
+            My main problem with that idea was that, honestly, I’ve never worked with voxel grids or runtime mesh generation. And this project, while
+            super fun, seemed at least intermediate in these fields, and I wasn’t confident I could deliver for my team on time. So, back to the drawing board.
         </p>
 
     </div>
