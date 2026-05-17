@@ -75,3 +75,26 @@
 .double-image > img {
     width: 100%;
 }
+
+.blog-sections-container {
+    position: sticky;
+    top: 0;
+}
+
+.blog-sections {
+    position: absolute;
+    left: -28%;
+    top: 100px;
+    width: 25%;
+    /*text-align: right;*/
+}
+
+.blog-sections > h3 {
+    text-align: right;
+    padding-bottom: 3%;
+
+}
+
+.blog-sections > h2 {
+    text-align: right;
+}

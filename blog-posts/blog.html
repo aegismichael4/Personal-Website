@@ -29,69 +29,76 @@
         <img class="header-img" src="../img/headers/header.png" alt="Header" draggable="false">
     </div>
 
-    <div class="area">
-    <div class="area-fill area-color"></div>
-    <div class="area-fill area-contrast"></div>
+    <div class="area" style="width: 60%">
+        <div class="area-fill area-color"></div>
+        <div class="area-fill area-contrast"></div>
+
+        <div class="blog-sections-container">
+            <div id="blog-sections" class="blog-sections">
+                <h3>Sections:</h3>
+            </div>
+        </div>
 
 
-    <div class="blog" id="stardozing-star-generator">
-        <h1>SteamID-Based Star Texture Generator</h1>
-        <h4>Published: 5.3.2026 ⭑ Last Updated: 5.5.2026</h4>
 
-        <h2>The Concept</h2>
-        <p>
-            I'm currently working on a 3D "friendslop" game called stardozing. In this game, you play as a little
-            star-bellied catbear, which looks a little something like this.
-        </p>
-        <img src="./img/star-generator/01-catbear-model.png" alt="Catbear" draggable="false" style="width: 20%">
-        <p>
-            We knew pretty early that we wanted them to be customizable, as we're hoping to support players in
-            building a connection to their character and differentiate themselves from their friends, and
-            set up a fun and simple way to reward player's efforts.
-            <br><br>
-            At some point, I had the idea that the stars on the starbears' bellies could be randomized somehow,
-            and that they'd be tied to the Steam ID of each player. That way, they'd be completely personalized
-            for each player--and better yet, it'd be really enticing; "you've got a special star design waiting
-            for you and you won't know what it is until you give the game a try!"
-            <br><br>
-            Here's a little snippet from our Miro board.
-        </p>
-        <img src="./img/star-generator/02-concept.png" alt="Concept for star designs" draggable="false">
+        <div class="blog" id="stardozing-star-generator">
+            <h1>SteamID-Based Star Texture Generator</h1>
+            <h4>Published: 5.3.2026 ⭑ Last Updated: 5.5.2026</h4>
 
-        <h2>The Process</h2>
-        <p>
-            Knowing I planned to use vertex displacement to make some funky star shapes, the first thing I did
-            was hop into Blender and model some stars, making an object for four through eleven pointed stars.
-        </p>
-        <img src="./img/star-generator/03-blender-stars.png" alt="Blender stars" draggable="false">
-        <p>
-            Bringing them into Unity, I set up a little scene with a camera rendering to a render texture. Later on,
-            I plan to make a copy of this texture on the actual starbear. For now, it just looks like we're about to
-            listen to the Stone Temple Pilots.
-        </p>
-        <img src="./img/star-generator/04-render-texture-setup.png" alt="Unity scene setup" draggable="false">
-        <p>
-            Moving on, I set up a little shader that takes in an integer "seed" value, as well as two configurable
-            parameters for the noise scale and offset, to displace each vertex of the star based on the seed input.
-        </p>
-        <img src="./img/star-generator/05-star-deformation.gif" alt="Star deformation" draggable="false">
-        <p>
-            Next, I used the seed to randomly determine which star to activate. At this point, I realized that eight
-            through eleven pointed stars look pretty awkward when randomly displaced, so I excluded them for now.
-        </p>
-        <img src="./img/star-generator/06-random-point-plus-deformation.gif" alt="Star deformation plus random selection" draggable="false">
-        <p>
-            My next step was to connect that render texture to the starbear's star material, which put a funky shaped star
-            on there, like this!
-        </p>
-        <img src="./img/star-generator/07-star-on-bellay.png" alt="Star deformation plus random selection">
+            <h2>The Concept</h2>
+            <p>
+                I'm currently working on a 3D "friendslop" game called stardozing. In this game, you play as a little
+                star-bellied catbear, which looks a little something like this.
+            </p>
+            <img src="./img/star-generator/01-catbear-model.png" alt="Catbear" draggable="false" style="width: 20%">
+            <p>
+                We knew pretty early that we wanted them to be customizable, as we're hoping to support players in
+                building a connection to their character and differentiate themselves from their friends, and
+                set up a fun and simple way to reward player's efforts.
+                <br><br>
+                At some point, I had the idea that the stars on the starbears' bellies could be randomized somehow,
+                and that they'd be tied to the Steam ID of each player. That way, they'd be completely personalized
+                for each player--and better yet, it'd be really enticing; "you've got a special star design waiting
+                for you and you won't know what it is until you give the game a try!"
+                <br><br>
+                Here's a little snippet from our Miro board.
+            </p>
+            <img src="./img/star-generator/02-concept.png" alt="Concept for star designs" draggable="false">
 
-        <p>
-            This is as far as I've got for now, as we're buckling on gameplay at the moment, but look forward to updates soon!
-        </p>
-    </div>
+            <h2>The Process</h2>
+            <p>
+                Knowing I planned to use vertex displacement to make some funky star shapes, the first thing I did
+                was hop into Blender and model some stars, making an object for four through eleven pointed stars.
+            </p>
+            <img src="./img/star-generator/03-blender-stars.png" alt="Blender stars" draggable="false">
+            <p>
+                Bringing them into Unity, I set up a little scene with a camera rendering to a render texture. Later on,
+                I plan to make a copy of this texture on the actual starbear. For now, it just looks like we're about to
+                listen to the Stone Temple Pilots.
+            </p>
+            <img src="./img/star-generator/04-render-texture-setup.png" alt="Unity scene setup" draggable="false">
+            <p>
+                Moving on, I set up a little shader that takes in an integer "seed" value, as well as two configurable
+                parameters for the noise scale and offset, to displace each vertex of the star based on the seed input.
+            </p>
+            <img src="./img/star-generator/05-star-deformation.gif" alt="Star deformation" draggable="false">
+            <p>
+                Next, I used the seed to randomly determine which star to activate. At this point, I realized that eight
+                through eleven pointed stars look pretty awkward when randomly displaced, so I excluded them for now.
+            </p>
+            <img src="./img/star-generator/06-random-point-plus-deformation.gif" alt="Star deformation plus random selection" draggable="false">
+            <p>
+                My next step was to connect that render texture to the starbear's star material, which put a funky shaped star
+                on there, like this!
+            </p>
+            <img src="./img/star-generator/07-star-on-bellay.png" alt="Star deformation plus random selection">
 
-    <div class="blog" id="stardozing-procedural-generation">
+            <p>
+                This is as far as I've got for now, as we're buckling on gameplay at the moment, but look forward to updates soon!
+            </p>
+        </div>
+
+        <div class="blog" id="stardozing-procedural-generation">
         <h1>Procedural Cave Generator</h1>
         <h4>Published: 5.3.2026 ⭑ Last Updated: 5.3.2026</h4>
 
@@ -166,10 +173,11 @@
             <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/we_are_some_of_the_devs_behind_peak_ama/"></a><br> in
             <a href="https://www.reddit.com/r/PeakGame/">PeakGame</a>
         </blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+        <br>
         <p>
-            This gave me a really silly idea for adapting this process for cave generation--if we could figure out how to make a basic cave mesh, just a rough system
-            of large tunnels scrapped together, I could send a 'probe' down the cave system and shoot rocks in every direction with raycasts. With enough randomness, it'd turn out
-            looking like a big rocky cave and more than likely have soft dead-ends, though we could prevent hard dead ends by keeping the tunnels all connected.
+            This gave me a really silly idea for adapting this process for cave generation--if we could figure out how to make a basic cave mesh, I could send a
+            'probe' down the cave system and shoot rocks in every direction with raycasts. With enough randomness, it'd turn out looking like a big rocky cave and
+            more than likely have soft dead-ends, though we could prevent hard dead ends by keeping the tunnels all connected.
         </p>
         <img src="./img/procedural-cave-generator/06-probe-concept.png" alt="Probe concept" draggable="false">
         <p>
@@ -177,23 +185,50 @@
             that I already had experience with. It could definitely achieve our no 'hard' dead-ends goal, and to tackle modularity, I could have it send the probe down in
             multiple passes, each time shooting with different, adjustable parameters.
             <br><br>
-            Excited to give it a try, I finally decided to get in-engine and start prototyping.
+            Further exploring this idea, I brought it up with my friend and peer Ivy Dudzik, who, similarly excited about the
+            idea, came up with a rough sketch detailing a plan to place down pre-made tunnel meshes, combined with joints to
+            make branching paths.
+            <br><br>
+            Circling back with my team, I brought Ivy's idea to my fellow programmer, Julia Manou, and we sat down with a
+            whiteboard to flesh out this system using a branching and collapsing node graph.
+        </p>
+        <img src="./img/procedural-cave-generator/07-node-graph-sketch.jpg" alt="Whiteboard sketch of our node graph" draggable="false">
+        <p>
+            With a strong plan to get started, Julia and I got to work, with them taking the node graph generation
+            and I, the mesh generation.
         </p>
 
-        <h2>Iterations</h2>
+        <h2>Tunnels</h2>
         <p>
-            After lots of work, this is what I came up with.
+            My first step was setting up a tunnel mesh, then some kind of line moving down the tunnel for the probe to move in.
+            I used Unity's gizmo system to visualize the path, which was actually just a bunch of empty game objects' transforms,
+            using the white circles for each point and a red line for each edge. When I press play, it uses a yellow circle to
+            visualize the 'probe' moving down the tunnel, shooting rays in all directions.
         </p>
         <video controls>
-            <source src="./img/procedural-cave-generator/07-prototype.mp4">
+            <source src="./img/procedural-cave-generator/08-tunnel-with-points-compressed.mp4">
+        </video>
+        <p>
+            After that, I buckled down on making those raycasts actually shoot rocks. After lots of work, this is where I ended
+            up.
+        </p>
+        <video controls>
+            <source src="./img/procedural-cave-generator/09-prototype-compressed.mp4">
         </video>
         <p>
             There's a couple of things going on here. I made two simple tunnel meshes in Blender and a simple collection of transforms to fill the tunnel's shape,
-            each represented by a white circle connect with red lines using Unity's gizmos. When I press play, it uses a yellow circle to visualize the 'probe'
-            moving down the tunnel, shooting rocks in all directions.
+            each represented by a white circle connect with red lines using Unity's gizmos.
             <br><br>
-            In this early prototype, I already 
+            In this early prototype, I already had set up my 'pass' system. The first shot flat wall rocks, then big round
+            rocks for variety next, then a final pass to clear up any 'holes' left from before. Note that the first pass shoots
+            regularly in all directions, the second regularly but only at the top of the tunnel, and the third only when it
+            'detects' a hole (when the raycast hits the tunnel mesh itself, and not another rock).
+            <br><br>
+            With a little extra work, I configured our player spawner script to wait until procedural generation had
+            finished to spawn the player, and make sure the spawn point was always placed on the ground.
         </p>
+        <img src="./img/procedural-cave-generator/10-waking-in-tunnel.png" alt="Walking in a generated tunnel" draggable="false">
+
 
     </div>
 
