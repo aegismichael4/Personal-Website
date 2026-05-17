@@ -62,6 +62,9 @@ function setActiveGame(gameID) {
         case "anabelle":
             screen.src = "https://sketchfab.com/models/4e5ce8f6053d4d77a4d96214792dd336/embed";
             break;
+        case "max-the-lynx":
+            screen.src = "https://www.youtube.com/embed/oc92CYMzx2A?si=HFkosuc3dlvEcyIX";
+            break;
         default:
             screen.src = "";
     }

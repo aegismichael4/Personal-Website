@@ -44,7 +44,7 @@
     margin: 10px 0;
 }
 
-.blog > img {
+.blog > img, .blog > video {
     margin: 20px 0;
     width: 50%;
 }

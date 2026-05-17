@@ -156,7 +156,40 @@
             My main problem with that idea was that, honestly, I’ve never worked with voxel grids or runtime mesh generation. And this project, while
             super fun, seemed at least intermediate in these fields, and I wasn’t confident I could deliver for my team on time. So, back to the drawing board.
             <br><br>
-            Feeling a little aimless, I turned to our ol' faithful for inspiration and started looking into how Peak generates its map.
+            Feeling a little aimless, I turned to our ol' faithful for inspiration and started looking into how Peak generates its map. That's when I stumbled
+            upon this thread on Reddit, which gave me a great idea!
+        </p>
+        <br>
+        <blockquote class="reddit-embed-bq" data-embed-context="1" data-embed-depth="2" data-embed-theme="dark" data-embed-showedits="false" data-embed-created="2026-05-17T02:26:11.239Z" data-embed-height="670">
+            <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/comment/n4e9ejy/">Comment</a><br> by
+            <a href="https://www.reddit.com/user/AggroCrab/">u/AggroCrab</a> from discussion
+            <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/we_are_some_of_the_devs_behind_peak_ama/"></a><br> in
+            <a href="https://www.reddit.com/r/PeakGame/">PeakGame</a>
+        </blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+        <p>
+            This gave me a really silly idea for adapting this process for cave generation--if we could figure out how to make a basic cave mesh, just a rough system
+            of large tunnels scrapped together, I could send a 'probe' down the cave system and shoot rocks in every direction with raycasts. With enough randomness, it'd turn out
+            looking like a big rocky cave and more than likely have soft dead-ends, though we could prevent hard dead ends by keeping the tunnels all connected.
+        </p>
+        <img src="./img/procedural-cave-generator/06-probe-concept.png" alt="Probe concept" draggable="false">
+        <p>
+            This idea had a little bit of everything. Though I'd never done anything like it, it seemed like a conceptually simple combination of many different things
+            that I already had experience with. It could definitely achieve our no 'hard' dead-ends goal, and to tackle modularity, I could have it send the probe down in
+            multiple passes, each time shooting with different, adjustable parameters.
+            <br><br>
+            Excited to give it a try, I finally decided to get in-engine and start prototyping.
+        </p>
+
+        <h2>Iterations</h2>
+        <p>
+            After lots of work, this is what I came up with.
+        </p>
+        <video controls>
+            <source src="./img/procedural-cave-generator/07-prototype.mp4">
+        </video>
+        <p>
+            There's a couple of things going on here. I made two simple tunnel meshes in Blender and a simple collection of transforms to fill the tunnel's shape,
+            each represented by a white circle connect with red lines using Unity's gizmos. When I press play, it    
         </p>
 
     </div>
