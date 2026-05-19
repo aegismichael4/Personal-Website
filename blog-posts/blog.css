@@ -92,7 +92,7 @@ h4 {
 .blog-sections > h4 {
     text-align: right;
     padding-bottom: 3%;
-
+    user-select: none;
 }
 
 .blog-sections > h2 {
@@ -107,4 +107,5 @@ h4 {
     transform-origin: right;
     color: #3C47C8;
     cursor: pointer;
+    user-select: none;
 }
