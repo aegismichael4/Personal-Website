@@ -100,7 +100,7 @@
 
         <div class="blog" id="stardozing-procedural-generation">
             <h1>Procedural Cave Generator</h1>
-            <h4>Published: 5.3.2026 ⭑ Last Updated: 5.3.2026</h4>
+            <h4>Published: 5.18.2026 ⭑ Last Updated: 5.18.2026</h4>
 
             <h2>Why Procedural?</h2>
             <p>
@@ -245,11 +245,94 @@
             </p>
             <div class="double-image">
                 <img src="./img/procedural-cave-generator/12-sprinkler.gif" alt="Sprinkler" draggable="false">
-                <img src="./img/procedural-cave-generator/03-voxel-triangulation.webp" alt="Marching cubes triangulation" draggable="false">
-                <h6>Source: Mojang Studios</h6>
-                <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey
-                    on Implicit Surface Polygonization</a></h6>
+                <img src="./img/procedural-cave-generator/13-joint.gif" alt="Marching cubes triangulation" draggable="false">
             </div>
+            <p>
+                Hooking up the new joint generator to the existing pass-based generation system wasn’t too hard, but it didn’t fully address one special problem
+                about the joints, they need to know when to cover up an exit, if there doesn’t happen to be a tunnel there. I’d have to address that later, though,
+                when I finally put everything together with the node graph system. For now, I just let Julia know it’d be nice if each node knew both its children
+                AND parents, so that it could enable a ‘plug’ mesh for each respective exit.
+            </p>
+
+            <h2>Putting It Together</h2>
+            <p>
+                My next step was to put together everything Julia and I had made, which was certainly easier said than done, though I’ll spare you the details as
+                it’s a little too technical and not conceptually interesting. One small hiccup of note, though, was that the diagonal tunnels needed to be a little
+                longer (thanks Pythagoras) so I made some longer meshes.
+                <br><br>
+                With the node graph, tunnels, and joints together, I had something looking like this.
+            </p>
+            <video controls>
+                <source src="./img/procedural-cave-generator/14-full-gen.mp4">
+            </video>
+            <p>
+                Note that after generating, the rocks disappear. What gives?
+                <br><br>
+                Well, while researching instantiation in Unity, I decided to do a little pre-optimization. I kept track, and each tunnel/joint generated between
+                200-500 rocks each, which I imagine will only go up as we add more detail/plants/items in the future. That seemed like altogether WAY too many
+                instantiation calls, and even more game objects to have loaded at once, so I employed object pooling and chunking.
+                <br><br>
+                To anyone who’s played Minecraft, chunking should be a familiar concept. It consists of dividing a map into more reasonably sized ‘chunks,’ then
+                loading and unloading them as needed (relative to player position). In our case, we were already generating the map into conveniently sized sections,
+                so I decided each tunnel/joint would be its own chunk.
+                <br><br>
+                Where chunking solves the problem of having too many objects loaded at once, object pooling solves the problem of too many instantiations. Every
+                time you tell Unity to create a new object, it takes time and memory. Turns out, it’s more efficient to deactivate rocks when not using them and
+                reactivate them where needed than it is to destroy and create them. This is the core concept of object pooling! Though the map itself may be tens
+                of thousands of rocks, I only need to instantiate a few thousand, as we never need all of them to be active at once.
+                <br><br>
+                After hooking up the chunking system to activate/deactivate when players enter/leave a chunk, I had this!
+            </p>
+            <img src="./img/procedural-cave-generator/15-chunking-one.gif" alt="Map loading/unloading when player walks in/out of chunk zone" draggable="false">
+            <img src="./img/procedural-cave-generator/16-chunking-two.gif" alt="Map loading/unloading when player is dragged in/out of chunk zone" draggable="false">
+            <p>
+                Feeling satisfied with my progress, and with the team starting to shift towards prototyping more gameplay for the time being, I set aside the map
+                generator for a little bit.
+            </p>
+
+            <h2>Seeds</h2>
+            <p>
+                When the time came to playtest the map generator, I loaded it up with my teammate’s computer and noticed something devastating. Even though we’d
+                seeded Unity’s random number generator, the map generated differently for the both of us, which was obviously unacceptable for a multiplayer game.
+                <br><br>
+                I saw two options from here: have the host generate the map and send it to everyone else, or fix our generator to be consistent, and have everyone
+                generate their own map given the same seed. Again, as the generator currently generates tens of thousands of rocks but in the future might generate
+                hundreds of thousands, I figured sending all that data would be impractical and slow.
+                <br><br>
+                Going the seed route meant LOTS of debugging to figure out what was going wrong. My first thought after a little research was to switch from the
+                Unity.Random class to the System.Random class, as the former is static unlike the latter, meaning with the System.Random class I could make absolute
+                certain that the map generator and only the map generator was calling for random values. This didn’t fix the problem, but was a necessary step anyways.
+                <br><br>
+                Up next, I tried cutting away features one-by-one to isolate the problem; chunking, rock deletion, tunnel spawning altogether—no matter what I removed,
+                the map would still generate differently each time. Notably, the construction of the node graph itself and thus the placement of the joints was
+                completely consistent, meaning somewhere along the rock spawning process I introduced an inconsistency.
+                <br><br>
+                After agonizing over it for hours, I finally discovered that at some point I made the generator spawn a configurable number of rocks each frame before
+                pausing in the name of speed. Unfortunately, it turns out that causes raycast consistency issues, as I manually set the spawn rate to one rock per
+                physics update, and it finally generated the same every time.
+                <br><br>
+                There was a big problem though, generating the entire map one rock at a time was incredibly slow. Doing some back-of-the-napkin math
+                (10,000 rocks x 0.02 seconds per physics update) meant generation took a whopping 200 seconds—completely unacceptable for our players!
+                <br><br>
+                At this time, I made a small sacrifice. I’d give in and allow more total instantiations calls by allowing each tunnel/joint to generate concurrently
+                (technically each joint generated its three outgoing tunnels in order then itself) in exchange for a much faster generation time, around 10 seconds
+                or so. This was much more reasonable.
+                <br><br>
+                Unfortunately, and confusingly, this broke it again, and it was no longer consistent. I brainstormed for a bit, then realized that all these generating
+                chunks might be making random calls in an inconsistent order, so I set up a simple queue to tick them in order every time, and thankfully that fixed it.
+            </p>
+            <video controls>
+                <source src="./img/procedural-cave-generator/17-seeds-demo.mp4">
+            </video>
+
+            <h2>Items</h2>
+            <p>
+                Item spawning is going to be the next major step for our generator. Because they’re ‘networked,’ meaning properly synced across the network unlike the
+                rocks, they must be spawned by the server. That means I can’t just add another pass to the algorithm like I could with something that doesn’t need to
+                move, like foliage or grass.
+                <br><br>
+                For now, this is where we’re at. Stay tuned for updates!
+            </p>
 
         </div>
 
