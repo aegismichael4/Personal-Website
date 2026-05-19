@@ -208,6 +208,25 @@ function createData() {
         "https://catalog.ucsc.edu/en/current/general-catalog/courses/artg-art-and-design-games-and-playable-media/100/artg-118",
         "https://aegishehe.itch.io/anabelle"
     ));
+
+    data.push(new GameJamData(
+        "max-the-lynx",
+        "Max the Lynx",
+        "Rivals Mod: Animator ⭑ Designer",
+        "Just before finishing my Associate's degrees and transferring to UC Santa Cruz to pursue game design more formally, I set out on a major project with my brother" +
+        "in designing and implementing a character mod from scratch for the Rivals Workshop Character Creation Contest. He handled the programming, I handled the animation," +
+        "and we collaborated on her mechanical design." +
+        "<br><br>" +
+        "This ended up being my most intensive animation project to date, with over 60 total animations and hundreds of unique frames being needed to fill out her kit. I " +
+        "took the opportunity to practice the basic principles of animation, with particular emphasis on anticipation (as is pivotal for a fighting game character) and " +
+        "follow through, primarily through the trailing air particles from her rocket anklets which help clarify and excentuate the movement of her kicks--her primary " +
+        "offensive tactic.",
+        ["img/screenshots/max-the-lynx/1.png", "img/screenshots/max-the-lynx/2.gif", "img/screenshots/max-the-lynx/3.gif", "img/screenshots/max-the-lynx/4.gif",
+            "img/screenshots/max-the-lynx/5.gif"],
+        "Rivals Workshop Character Creation Contest ⭑ October-December 2023",
+        "https://aetherstudios.com/news/rivals-workshop-character-creation-contest/",
+        "https://steamcommunity.com/sharedfiles/filedetails/?id=3125980850"
+    ));
 }
 createData();
 

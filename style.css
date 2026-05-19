@@ -65,6 +65,22 @@ p {
     color: white;
 }
 
+p > a:link, h6 > a:link {
+    color: #8992f5;
+}
+
+p > a:visited, h6 > a:visited {
+    color: #3C47C8;
+}
+
+p > a:hover, h6 > a:hover {
+    color: #aab0fa;
+}
+
+p > a:active, h6 > a:active {
+    color: #e0e3ff;
+}
+
 body {
     background-image: url("img/backgrounds/bg3.jpg");
     background-repeat: no-repeat;
@@ -100,12 +116,13 @@ body {
 .scroll-buttons > h3 {
     /*width: 100%;*/
     margin-top: 0;
+    padding-top: 0.5%;
 }
 
 .header-img {
     width: 85%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 1%;
 }
 
 .header > h1 {
@@ -136,6 +153,7 @@ body {
     transition: all 0.12s ease;
     transform: scale(1.2);
     background-color: #3C47C8;
+    cursor: pointer;
 }
 
 .hidden-arrows > img {
@@ -158,6 +176,10 @@ body {
     width: 4%;
 
     transition: all 0.2s ease;
+}
+
+.up-arrows:hover {
+    cursor:pointer;
 }
 
 .up-one {

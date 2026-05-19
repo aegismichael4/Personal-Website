@@ -23,18 +23,28 @@
     margin-bottom: 0;
 }
 
-.blog > h4 {
+h4 {
     font-family: "oswald";
     color: white;
     font-size: 1.45vw;
     margin: 0;
 }
 
+/*used for image credits*/
+.blog > h6, .double-image > h6 {
+    font-family: "lora";
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -1%;
+}
+
 .blog > p {
     margin: 10px 0;
 }
 
-.blog > img {
+.blog > img, .blog > video {
     margin: 20px 0;
     width: 50%;
 }
@@ -51,4 +61,50 @@
 
 .back-arrow > img {
     transform: rotate(-90deg);
+}
+
+.double-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+
+    padding: 0 20%;
+    margin: 20px 0;
+}
+
+.double-image > img {
+    width: 100%;
+}
+
+.blog-sections-container {
+    position: sticky;
+    top: 0;
+}
+
+.blog-sections {
+    position: absolute;
+    left: -28%;
+    top: 100px;
+    width: 25%;
+    /*text-align: right;*/
+}
+
+.blog-sections > h4 {
+    text-align: right;
+    padding-bottom: 3%;
+
+}
+
+.blog-sections > h2 {
+    text-align: right;
+    transform-origin: right;
+    margin-bottom: 2%;
+    font-size: 1.2vw;
+}
+
+
+.blog-sections > h2:hover {
+    transform-origin: right;
+    color: #3C47C8;
+    cursor: pointer;
 }
