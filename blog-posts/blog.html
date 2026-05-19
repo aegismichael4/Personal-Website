@@ -35,7 +35,7 @@
 
         <div class="blog-sections-container">
             <div id="blog-sections" class="blog-sections">
-                <h3>Sections:</h3>
+                <h4>Sections:</h4>
             </div>
         </div>
 
@@ -99,138 +99,159 @@
         </div>
 
         <div class="blog" id="stardozing-procedural-generation">
-        <h1>Procedural Cave Generator</h1>
-        <h4>Published: 5.3.2026 ⭑ Last Updated: 5.3.2026</h4>
+            <h1>Procedural Cave Generator</h1>
+            <h4>Published: 5.3.2026 ⭑ Last Updated: 5.3.2026</h4>
 
-        <h2>Why Procedural Generation?</h2>
-        <p>
-            I'm currently a Technical Designer on stardozing, a 3D multiplayer 'friendslop' game about cave diving and throwing your friends around! As we ideated the
-            game and analyzed others of the same genre as we were getting started, we noted that procedural generation would be an absolute necessity for our game.
-            <br><br>
-            Taking after games like Peak and Lethal Company, map generation, paired with player interaction, are the two primary driving forces for gameplay variety and
-            replayability. We began development with this notion, and a great cave aesthetic/composition moodboard put together by our creative director,
-            <a href="https://www.sofiaminifard.com/" target="_blank">Sofia Aminifard</a>.
-        </p>
-        <img src="./img/procedural-cave-generator/01-miro.png" alt="Cave Generation in our miro board" draggable="false">
+            <h2>Why Procedural?</h2>
+            <p>
+                I'm currently a Technical Designer on stardozing, a 3D multiplayer 'friendslop' game about cave diving and throwing your friends around! As we ideated the
+                game and analyzed others of the same genre as we were getting started, we noted that procedural generation would be an absolute necessity for our game.
+                <br><br>
+                Taking after games like Peak and Lethal Company, map generation, paired with player interaction, are the two primary driving forces for gameplay variety and
+                replayability. We began development with this notion, and a great cave aesthetic/composition moodboard put together by our creative director,
+                <a href="https://www.sofiaminifard.com/" target="_blank">Sofia Aminifard</a>.
+            </p>
+            <img src="./img/procedural-cave-generator/01-miro.png" alt="Cave Generation in our miro board" draggable="false">
 
-        <h2>Generation Goals</h2>
-        <p>
-            When it became time for us to actually start developing a map generator, we started by laying out some base goals.
+            <h2>Generation Goals</h2>
+            <p>
+                When it became time for us to actually start developing a map generator, we started by laying out some base goals.
 
-            <br><br><strong>No ‘Hard’ Dead-Ends</strong><br>
-            After some debate, we decided it’d be best if there was never a true dead-end that fully prevented players from continuing down their path. But,
-            inspired by Peak, we were more than happy with the idea of what we called a ‘soft’ dead end. With our future plans for
-            various movement strategies and items, our ideal map generator would never stop players from continuing if they were truly determined
-            and willing to expend enough resources.
+                <br><br><strong>No ‘Hard’ Dead-Ends</strong><br>
+                After some debate, we decided it’d be best if there was never a true dead-end that fully prevented players from continuing down their path. But,
+                inspired by Peak, we were more than happy with the idea of what we called a ‘soft’ dead end. With our future plans for
+                various movement strategies and items, our ideal map generator would never stop players from continuing if they were truly determined
+                and willing to expend enough resources.
 
-            <br><br><strong>Well Tuned</strong><br>
-            To achieve the replayability we were hoping for while maintaining our cave diving aesthetic experience and keep the game feeling focused,
-            we wanted just the right amount of randomness.
+                <br><br><strong>Well Tuned</strong><br>
+                To achieve the replayability we were hoping for while maintaining our cave diving aesthetic experience and keep the game feeling focused,
+                we wanted just the right amount of randomness.
 
-            <br><br><strong>Modular</strong><br>
-            We’re very much in the process of ‘bottom up’ designing stardozing, and want to have the flexibility to pivot and expand on our map
-            generator as we see fit. For example, we already have plans forming for different biomes.
+                <br><br><strong>Modular</strong><br>
+                We’re very much in the process of ‘bottom up’ designing stardozing, and want to have the flexibility to pivot and expand on our map
+                generator as we see fit. For example, we already have plans forming for different biomes.
 
-            <br><br><strong>Deterministic</strong><br>
-            We want to ensure that, given a seed, we’ll always generate the same map. This is absolutely pivotal, as our
-            current plans for syncing maps between each player is to give them each the same seed, and trust that they generate the same map.
+                <br><br><strong>Deterministic</strong><br>
+                We want to ensure that, given a seed, we’ll always generate the same map. This is absolutely pivotal, as our
+                current plans for syncing maps between each player is to give them each the same seed, and trust that they generate the same map.
 
-            <br><br><strong>Fast</strong><br>
-            We don’t want to keep players waiting!
-        </p>
+                <br><br><strong>Fast</strong><br>
+                We don’t want to keep players waiting!
+            </p>
 
-        <h2>The Idea</h2>
-        <p>
-            With our goals in mind, I began researching and ideating potential approaches to procedural map generation. My mind initially went to
-            the true classic for terrain generation: using layered noise for a height map. I quickly ruled that out for the fatal flaw in that caves
-            are roughly circular, and height maps don’t even allow for overhangs, let alone full cave systems.
-        </p>
-        <img src="./img/procedural-cave-generator/02-perlin-terrain.png" alt="Perlin noise based terrain generation" draggable="false">
-        <h6>Source: <a href="https://www.redblobgames.com/maps/terrain-from-noise/" target="_blank">Red Blob Games</a></h6>
-        <p>
-            That line of reasoning (and research) led me to my next potential idea: subtraction in a voxel grid to carve out a cave, paired with marching
-            cubes triangulation to generate the actual playable space. This had some distinct advantages—subtractive generation seems to closely mirror
-            cave formation via erosion, which could lead to some pretty convincing caves, like in Minecraft!
-        </p>
-        <div class="double-image">
-            <img src="./img/procedural-cave-generator/04-minecraft-cave.jpg" alt="Minecraft cave" draggable="false">
-            <img src="./img/procedural-cave-generator/03-voxel-triangulation.webp" alt="Marching cubes triangulation" draggable="false">
-            <h6>Source: Mojang Studios</h6>
-            <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey
-                on Implicit Surface Polygonization</a></h6>
+            <h2>The Idea</h2>
+            <p>
+                With our goals in mind, I began researching and ideating potential approaches to procedural map generation. My mind initially went to
+                the true classic for terrain generation: using layered noise for a height map. I quickly ruled that out for the fatal flaw in that caves
+                are roughly circular, and height maps don’t even allow for overhangs, let alone full cave systems.
+            </p>
+            <img src="./img/procedural-cave-generator/02-perlin-terrain.png" alt="Perlin noise based terrain generation" draggable="false">
+            <h6>Source: <a href="https://www.redblobgames.com/maps/terrain-from-noise/" target="_blank">Red Blob Games</a></h6>
+            <p>
+                That line of reasoning (and research) led me to my next potential idea: subtraction in a voxel grid to carve out a cave, paired with marching
+                cubes triangulation to generate the actual playable space. This had some distinct advantages—subtractive generation seems to closely mirror
+                cave formation via erosion, which could lead to some pretty convincing caves, like in Minecraft!
+            </p>
+            <div class="double-image">
+                <img src="./img/procedural-cave-generator/04-minecraft-cave.jpg" alt="Minecraft cave" draggable="false">
+                <img src="./img/procedural-cave-generator/03-voxel-triangulation.webp" alt="Marching cubes triangulation" draggable="false">
+                <h6>Source: Mojang Studios</h6>
+                <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey
+                    on Implicit Surface Polygonization</a></h6>
+            </div>
+            <p>
+                My main problem with that idea was that, honestly, I’ve never worked with voxel grids or runtime mesh generation. And this project, while
+                super fun, seemed at least intermediate in these fields, and I wasn’t confident I could deliver for my team on time. So, back to the drawing board.
+                <br><br>
+                Feeling a little aimless, I turned to our ol' faithful for inspiration and started looking into how Peak generates its map. That's when I stumbled
+                upon this thread on Reddit, which gave me a great idea!
+            </p>
+            <br>
+            <blockquote class="reddit-embed-bq" data-embed-context="1" data-embed-depth="2" data-embed-theme="dark" data-embed-showedits="false" data-embed-created="2026-05-17T02:26:11.239Z" data-embed-height="670">
+                <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/comment/n4e9ejy/">Comment</a><br> by
+                <a href="https://www.reddit.com/user/AggroCrab/">u/AggroCrab</a> from discussion
+                <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/we_are_some_of_the_devs_behind_peak_ama/"></a><br> in
+                <a href="https://www.reddit.com/r/PeakGame/">PeakGame</a>
+            </blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+            <br>
+            <p>
+                This gave me a really silly idea for adapting this process for cave generation--if we could figure out how to make a basic cave mesh, I could send a
+                'probe' down the cave system and shoot rocks in every direction with raycasts. With enough randomness, it'd turn out looking like a big rocky cave and
+                more than likely have soft dead-ends, though we could prevent hard dead ends by keeping the tunnels all connected.
+            </p>
+            <img src="./img/procedural-cave-generator/06-probe-concept.png" alt="Probe concept" draggable="false">
+            <p>
+                This idea had a little bit of everything. Though I'd never done anything like it, it seemed like a conceptually simple combination of many different things
+                that I already had experience with. It could definitely achieve our no 'hard' dead-ends goal, and to tackle modularity, I could have it send the probe down in
+                multiple passes, each time shooting with different, adjustable parameters.
+                <br><br>
+                Further exploring this idea, I brought it up with my friend and peer Ivy Dudzik, who, similarly excited about the
+                idea, came up with a rough sketch detailing a plan to place down pre-made tunnel meshes, combined with joints to
+                make branching paths.
+                <br><br>
+                Circling back with my team, I brought Ivy's idea to my fellow programmer, Julia Manou, and we sat down with a
+                whiteboard to flesh out this system using a branching and collapsing node graph.
+            </p>
+            <img src="./img/procedural-cave-generator/07-node-graph-sketch.jpg" alt="Whiteboard sketch of our node graph" draggable="false">
+            <p>
+                With a strong plan to get started, Julia and I got to work, with them taking the node graph generation
+                and I, the mesh generation.
+            </p>
+
+            <h2>Tunnels</h2>
+            <p>
+                My first step was setting up a tunnel mesh, then some kind of line moving down the tunnel for the probe to move in.
+                <br><br>
+                I used Unity's gizmo system to visualize the path, which was actually just a bunch of empty game objects' transforms,
+                using the white circles for each point and a red line for each edge. When I press play, it uses a yellow circle to visualize
+                the 'probe' moving down the tunnel, shooting rays in all directions.
+            </p>
+            <video controls>
+                <source src="./img/procedural-cave-generator/08-tunnel-with-points-compressed.mp4">
+            </video>
+            <p>
+                After that, I buckled down on making those raycasts actually shoot rocks. After lots of work, this is where I ended
+                up.
+            </p>
+            <video controls>
+                <source src="./img/procedural-cave-generator/09-prototype-compressed.mp4">
+            </video>
+            <p>
+                There's a couple of things going on here. I made two simple tunnel meshes in Blender and a simple collection of transforms to fill the tunnel's shape,
+                each represented by a white circle connect with red lines using Unity's gizmos.
+                <br><br>
+                In this early prototype, I already had set up my 'pass' system. The first shot flat wall rocks, then big round
+                rocks for variety next, then a final pass to clear up any 'holes' left from before. Note that the first pass shoots
+                regularly in all directions, the second regularly but only at the top of the tunnel, and the third only when it
+                'detects' a hole (when the raycast hits the tunnel mesh itself, and not another rock).
+                <br><br>
+                Another small thing I did was move through again at the end, and delete any rocks that intersect with the probe’s path to guarantee a technically
+                viable path through any tunnel.
+                <br><br>
+                With a little extra work, I configured our player spawner script to wait until procedural generation had
+                finished to spawn the player, and make sure the spawn point was always placed on the ground.
+            </p>
+            <img src="./img/procedural-cave-generator/10-waking-in-tunnel.png" alt="Walking in a generated tunnel" draggable="false">
+
+            <h2>Joints</h2>
+            <p>
+                If the tunnels in our generator represent the edges of the node graph, the nodes themselves are what I call ‘joints.’ They’re shaped something
+                like a tortoise shell, a big flattened sphere with three entrances and three exits—in this case, with each hole corresponding to an incoming or
+                outgoing tunnel.
+                <br><br>
+                Because of their sphere-ish shape, I knew I’d have to use some form of generation other than the probe approach. I landed on something more like
+                a sprinkler, where a single, stationary point in the center shoots a circle of rays, then turns slightly and does the same until every direction
+                has been covered.
+            </p>
+            <div class="double-image">
+                <img src="./img/procedural-cave-generator/12-sprinkler.gif" alt="Sprinkler" draggable="false">
+                <img src="./img/procedural-cave-generator/03-voxel-triangulation.webp" alt="Marching cubes triangulation" draggable="false">
+                <h6>Source: Mojang Studios</h6>
+                <h6>Source: <a href="https://www.researchgate.net/publication/277975970_A_Survey_on_Implicit_Surface_Polygonization" target="_blank">A Survey
+                    on Implicit Surface Polygonization</a></h6>
+            </div>
+
         </div>
-        <p>
-            My main problem with that idea was that, honestly, I’ve never worked with voxel grids or runtime mesh generation. And this project, while
-            super fun, seemed at least intermediate in these fields, and I wasn’t confident I could deliver for my team on time. So, back to the drawing board.
-            <br><br>
-            Feeling a little aimless, I turned to our ol' faithful for inspiration and started looking into how Peak generates its map. That's when I stumbled
-            upon this thread on Reddit, which gave me a great idea!
-        </p>
-        <br>
-        <blockquote class="reddit-embed-bq" data-embed-context="1" data-embed-depth="2" data-embed-theme="dark" data-embed-showedits="false" data-embed-created="2026-05-17T02:26:11.239Z" data-embed-height="670">
-            <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/comment/n4e9ejy/">Comment</a><br> by
-            <a href="https://www.reddit.com/user/AggroCrab/">u/AggroCrab</a> from discussion
-            <a href="https://www.reddit.com/r/PeakGame/comments/1m5s7ei/we_are_some_of_the_devs_behind_peak_ama/"></a><br> in
-            <a href="https://www.reddit.com/r/PeakGame/">PeakGame</a>
-        </blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
-        <br>
-        <p>
-            This gave me a really silly idea for adapting this process for cave generation--if we could figure out how to make a basic cave mesh, I could send a
-            'probe' down the cave system and shoot rocks in every direction with raycasts. With enough randomness, it'd turn out looking like a big rocky cave and
-            more than likely have soft dead-ends, though we could prevent hard dead ends by keeping the tunnels all connected.
-        </p>
-        <img src="./img/procedural-cave-generator/06-probe-concept.png" alt="Probe concept" draggable="false">
-        <p>
-            This idea had a little bit of everything. Though I'd never done anything like it, it seemed like a conceptually simple combination of many different things
-            that I already had experience with. It could definitely achieve our no 'hard' dead-ends goal, and to tackle modularity, I could have it send the probe down in
-            multiple passes, each time shooting with different, adjustable parameters.
-            <br><br>
-            Further exploring this idea, I brought it up with my friend and peer Ivy Dudzik, who, similarly excited about the
-            idea, came up with a rough sketch detailing a plan to place down pre-made tunnel meshes, combined with joints to
-            make branching paths.
-            <br><br>
-            Circling back with my team, I brought Ivy's idea to my fellow programmer, Julia Manou, and we sat down with a
-            whiteboard to flesh out this system using a branching and collapsing node graph.
-        </p>
-        <img src="./img/procedural-cave-generator/07-node-graph-sketch.jpg" alt="Whiteboard sketch of our node graph" draggable="false">
-        <p>
-            With a strong plan to get started, Julia and I got to work, with them taking the node graph generation
-            and I, the mesh generation.
-        </p>
-
-        <h2>Tunnels</h2>
-        <p>
-            My first step was setting up a tunnel mesh, then some kind of line moving down the tunnel for the probe to move in.
-            I used Unity's gizmo system to visualize the path, which was actually just a bunch of empty game objects' transforms,
-            using the white circles for each point and a red line for each edge. When I press play, it uses a yellow circle to
-            visualize the 'probe' moving down the tunnel, shooting rays in all directions.
-        </p>
-        <video controls>
-            <source src="./img/procedural-cave-generator/08-tunnel-with-points-compressed.mp4">
-        </video>
-        <p>
-            After that, I buckled down on making those raycasts actually shoot rocks. After lots of work, this is where I ended
-            up.
-        </p>
-        <video controls>
-            <source src="./img/procedural-cave-generator/09-prototype-compressed.mp4">
-        </video>
-        <p>
-            There's a couple of things going on here. I made two simple tunnel meshes in Blender and a simple collection of transforms to fill the tunnel's shape,
-            each represented by a white circle connect with red lines using Unity's gizmos.
-            <br><br>
-            In this early prototype, I already had set up my 'pass' system. The first shot flat wall rocks, then big round
-            rocks for variety next, then a final pass to clear up any 'holes' left from before. Note that the first pass shoots
-            regularly in all directions, the second regularly but only at the top of the tunnel, and the third only when it
-            'detects' a hole (when the raycast hits the tunnel mesh itself, and not another rock).
-            <br><br>
-            With a little extra work, I configured our player spawner script to wait until procedural generation had
-            finished to spawn the player, and make sure the spawn point was always placed on the ground.
-        </p>
-        <img src="./img/procedural-cave-generator/10-waking-in-tunnel.png" alt="Walking in a generated tunnel" draggable="false">
-
-
-    </div>
 
     </div>
 

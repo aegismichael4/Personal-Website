@@ -23,7 +23,7 @@
     margin-bottom: 0;
 }
 
-.blog > h4 {
+h4 {
     font-family: "oswald";
     color: white;
     font-size: 1.45vw;
@@ -89,7 +89,7 @@
     /*text-align: right;*/
 }
 
-.blog-sections > h3 {
+.blog-sections > h4 {
     text-align: right;
     padding-bottom: 3%;
 
@@ -97,4 +97,14 @@
 
 .blog-sections > h2 {
     text-align: right;
+    transform-origin: right;
+    margin-bottom: 2%;
+    font-size: 1.2vw;
+}
+
+
+.blog-sections > h2:hover {
+    transform-origin: right;
+    color: #3C47C8;
+    cursor: pointer;
 }
