@@ -97,7 +97,7 @@ function createData() {
         "slingstar",
         "slingstar",
         "Studio Verdigris: Lead Design ⭑ Graphics Programmer ⭑ VFX Artist",
-        "Slingstar was my first-ever 3D game, and an amazing experience at that! Given the theme 'Cozy Cyberpunk,' we came up with " +
+        "slingstar was my first-ever 3D game, and an amazing experience at that! Given the theme 'Cozy Cyberpunk,' we came up with " +
         "the idea for a cooking sim game about slingin' dawgs in a dystopian cyber-city, which turned out to be really fun to work on. The " +
         "core-loop is simple: make a good enough hot dog to please the current customer, given their sensitivity. More lenient customers will " +
         "tolerate more rat meat and are more likely to leave a good review, and vice versa.<br><br>" +
