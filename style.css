@@ -120,9 +120,16 @@ body {
 }
 
 .header-img {
+    position: absolute;
     width: 85%;
     height: auto;
-    margin-top: 1%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-icons {
+    margin-top: 20%;
 }
 
 .header > h1 {

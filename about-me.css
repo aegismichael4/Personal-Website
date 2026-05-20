@@ -1,3 +1,7 @@
+.about-me {
+    margin-top: 7%;
+}
+
 .about-me > :where(h1, h2, p) {
     padding-left: 7%;
     padding-right: 35%;
