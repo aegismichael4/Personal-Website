@@ -1,5 +1,6 @@
 .blog-area {
     margin-top: 20%;
+    width: 65%;
 }
 
 .blog {
@@ -15,7 +16,8 @@
 }
 
 .blog > h1 {
-    padding-top: 3%;
+    /*padding-top: 3%;*/
+    margin-top: 0;
     padding-left: 7%;
     padding-right: 7%;
     text-align: center;

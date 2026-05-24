@@ -6,6 +6,7 @@
 
     --h1-size: 55px;
     --h2-size: 28px;
+    --h3-size: 22px;
     --p-size: 24px;
 }
 
@@ -43,7 +44,7 @@ h2 {
 h3 {
     font-family: "oswald";
     color: white;
-    font-size: 1.45vw;
+    font-size: var(--h3-size);
     text-align: left;
     margin: 0;
     padding-top: 1.5%;
@@ -113,10 +114,25 @@ body {
     justify-content: right;
 }
 
-.scroll-buttons > h3 {
+.scroll-button-container {
+    /*background-color: white; only in mobile */
+    border-radius: 5px;
+    /*padding-top: 2px;*/
+    /*padding-left: 5px;*/
+    /*padding-right: 5px;*/
+    padding: 0;
+}
+
+.scroll-button-container > h3 {
     /*width: 100%;*/
     margin-top: 0;
     padding-top: 0.5%;
+    z-index: 1;
+    color: white;
+}
+
+.scroll-button-container > h3:hover {
+    color: #3C47C8;
 }
 
 .header-img {

@@ -15,7 +15,9 @@
 }
 
 .steam-release-info {
-    margin: 3% 12% 5%;
+    /*margin: 3% 12% 5%;*/
+    margin-left: 5%;
+    margin-right: 5%;
     display: inline-block;
 }
 
