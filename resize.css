@@ -124,7 +124,7 @@
 
     .about-me {
         margin-top: 15%;
-        padding-bottom: 10%;
+        padding-bottom: 15%;
     }
 
     .about-me-buttons > a > button > img {
@@ -152,14 +152,12 @@
         font-size: 8px;
     }
 
-    .blog-area {
-        width: 105%;
-        margin-top: 25%;
+    .steam-release-info > h2 {
+        padding-right: 25%;
     }
 
-    .blog > :where(h2, h3, p) {
-        padding-left: 10%;
-        padding-right: 10%;
+    .dots {
+        top: 15vw;
     }
 
 }
@@ -168,6 +166,18 @@
     
     .about-me {
         padding-bottom: 20%;
+    }
+}
+
+@media (max-aspect-ratio: 11/16) {
+    .blog-area {
+        width: 105%;
+        margin-top: 25%;
+    }
+
+    .blog > :where(h2, h3, p) {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 

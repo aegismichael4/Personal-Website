@@ -30,6 +30,7 @@
     margin-left: 5%;
     margin-bottom: 5%;
     margin-top: 2.5%;
+    width: 50%;
 }
 
 .mobile-trailer-container {
@@ -37,7 +38,7 @@
 }
 
 .trailer {
-    width: 40vw;
+    width: 100%;
     aspect-ratio: 16 / 9;
 
     border:none;
