@@ -194,6 +194,13 @@
         padding-right: 25%;
     }
 
+    .game-jams-container {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        margin: 1% 7% 3%;
+        gap: 2%;
+    }
+
 }
 
 h1, h2, p, .about-me-buttons > button {
