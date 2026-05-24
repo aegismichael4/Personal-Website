@@ -121,22 +121,9 @@
         border-radius: 8px;
         margin-top: 5%;
     }
-
-    .game-jam-icon > div {
-        width: 30px;
-        height: 30px;
-    }
     
     .game-jam-link {
         font-size: 8px;
-    }
-
-    .steam-release-info > h2 {
-        padding-right: 25%;
-    }
-
-    .dots {
-        top: 15vw;
     }
 
 }
@@ -166,7 +153,8 @@
 
     .scroll-button-container {
         background-color: white;
-        /*padding-top: 2px;*/
+        padding-top: 2px;
+        padding-bottom: 2px;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -178,12 +166,34 @@
 
     .scroll-button-container > h3 {
         color: black;
+        font-size: 14px;
     }
 
     .scroll-button-container > h3:hover {
         color: black;
         transform: scale(1);
     }
+
+    .about-me {
+        padding-bottom: 18%;
+    }
+
+    .steam-release-info > h2 {
+        padding-right: 25%;
+    }
+
+    .carousel-side {
+        display: none;
+    }
+
+    .carousel-bottom, .game-jam-icon-mobile {
+        display: inline-block;
+    }
+
+    .game-jam-info > h1, .game-jam-info > h2 {
+        padding-right: 25%;
+    }
+
 }
 
 h1, h2, p, .about-me-buttons > button {

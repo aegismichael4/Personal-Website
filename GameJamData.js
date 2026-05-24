@@ -241,8 +241,10 @@ function retrieveData(id) {
 const title = document.getElementById("game-jam-title");
 const position = document.getElementById("game-jam-position");
 const description = document.getElementById("game-jam-description");
-const name = document.getElementById("game-jam-name");
+const nameSide = document.getElementById("game-jam-name-side");
+const nameBottom = document.getElementById("game-jam-name-bottom");
 const button = document.getElementById("game-jam-a");
+const buttonMobile = document.getElementById("game-jam-a-mobile");
 
 function setDescription(gameID) {
     const data = retrieveData(gameID);
@@ -255,10 +257,14 @@ function setDescription(gameID) {
     position.innerHTML = data.position;
     description.innerHTML = data.description;
 
-    name.innerHTML = data.gameJamName;
-    name.setAttribute("href", data.gameJamLink);
+    nameSide.innerHTML = data.gameJamName;
+    nameSide.setAttribute("href", data.gameJamLink);
+
+    nameBottom.innerHTML = data.gameJamName;
+    nameBottom.setAttribute("href", data.gameJamLink);
 
     button.setAttribute("href", data.gameLink);
+    buttonMobile.setAttribute("href", data.gameLink);
 
     setCarousel(data.images);
 }

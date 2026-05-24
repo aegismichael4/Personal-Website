@@ -1,4 +1,5 @@
-const carouselImages = document.getElementById("carousel-images");
+const carouselImagesSide = document.getElementById("carousel-images-side");
+const carouselImagesBottom = document.getElementById("carousel-images-bottom");
 
 let carouselActive = false;
 let activeImages = [];
@@ -13,34 +14,52 @@ function setCarousel(imageSources) {
     activeImages = [];
     activeDots = [];
 
-    carouselImages.innerHTML = ""; // clear all images and dots
+    carouselImagesSide.innerHTML = ""; // clear all images and dots
+    carouselImagesBottom.innerHTML = "";
 
-    const dots = document.createElement("div");
-    dots.setAttribute("class", "dots");
-    carouselImages.appendChild(dots);
+    const dotsSide = document.createElement("div");
+    dotsSide.setAttribute("class", "dots");
+    carouselImagesSide.appendChild(dotsSide);
+
+    const dotsBottom = document.createElement("div");
+    dotsBottom.setAttribute("class", "dots");
+    carouselImagesBottom.appendChild(dotsBottom);
 
     for (const img of imageSources) {
 
-        // add image
-        const newImage = document.createElement("img");
-        newImage.setAttribute("src", img);
-        newImage.setAttribute("alt", "Screenshot");
-        newImage.setAttribute("draggable", "false");
-        carouselImages.appendChild(newImage);
-        activeImages.push(newImage);
+        // add side image
+        const newImageSide = document.createElement("img");
+        newImageSide.setAttribute("src", img);
+        newImageSide.setAttribute("alt", "Screenshot");
+        newImageSide.setAttribute("draggable", "false");
+        carouselImagesSide.appendChild(newImageSide);
+        activeImages.push(newImageSide);
+
+        // add bottom image
+        const newImageBottom = document.createElement("img");
+        newImageBottom.setAttribute("src", img);
+        newImageBottom.setAttribute("alt", "Screenshot");
+        newImageBottom.setAttribute("draggable", "false");
+        carouselImagesBottom.appendChild(newImageBottom);
+        activeImages.push(newImageBottom);
 
         // add dot
-        const dot = document.createElement("div");
-        dot.setAttribute("class", "dotInactive");
-        dots.appendChild(dot);
-        activeDots.push(dot);
+        const dotSide = document.createElement("div");
+        dotSide.setAttribute("class", "dotInactive");
+        dotsSide.appendChild(dotSide);
+        activeDots.push(dotSide);
+
+        const dotBottom = document.createElement("div");
+        dotBottom.setAttribute("class", "dotInactive");
+        dotsBottom.appendChild(dotBottom);
+        activeDots.push(dotBottom);
     }
     activeImageIndex = 0;
     setActiveImage();
 }
 
 function nextImage() {
-    activeImageIndex++;
+    activeImageIndex+=2;
     if (activeImageIndex >= activeImages.length) activeImageIndex = 0;
     setActiveImage();
 }
@@ -51,7 +70,10 @@ function setActiveImage() {
         activeDots[i].setAttribute("class", "dotInactive");
     }
     activeImages[activeImageIndex].setAttribute("style", "display: inline; object-fit: contain; background-color: black;");
+    activeImages[activeImageIndex+1].setAttribute("style", "display: inline; object-fit: contain; background-color: black;");
     activeDots[activeImageIndex].setAttribute("class", "dotActive");
+    activeDots[activeImageIndex+1].setAttribute("class", "dotActive");
+
 }
 
 let timer = 0;

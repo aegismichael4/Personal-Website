@@ -99,7 +99,20 @@
     padding-top: 2%;
 }
 
-.carousel {
+.game-jam-icon-mobile {
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.carousel-bottom {
+    display: none;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.carousel-side {
     float: right;
     width:  40%;
     padding-left: 2%;
@@ -108,7 +121,7 @@
     display: inline-block;
 }
 
-.carousel > a {
+.carousel-side > a {
     display: inline-block;
 }
 
@@ -124,11 +137,12 @@
 .carousel-images {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .dots {
     position: absolute;
-    top: 16vw;
+    bottom: 5%;
     display: flex;
     gap: .2vw;
 
