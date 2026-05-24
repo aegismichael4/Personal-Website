@@ -100,27 +100,6 @@
         width: 300px;
         top: -28px;
     }
-    
-    .scroll-button-container {
-        background-color: white;
-        /*padding-top: 2px;*/
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .scroll-button-container:hover {
-        transform: scale(1.1);
-        background-color: #3C47C8;
-    }
-    
-    .scroll-button-container > h3 {
-        color: black;
-    }
-    
-    .scroll-button-container > h3:hover {
-        color: black;
-        transform: scale(1);
-    }
 
     .about-me {
         margin-top: 15%;
@@ -169,15 +148,41 @@
     }
 }
 
-@media (max-aspect-ratio: 11/16) {
+@media (max-aspect-ratio: 10/16) {
+
+    .header-icons {
+        margin-top: 25%;
+    }
+
     .blog-area {
         width: 105%;
-        margin-top: 25%;
+        margin-top: 30%;
     }
 
     .blog > :where(h2, h3, p) {
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+    .scroll-button-container {
+        background-color: white;
+        /*padding-top: 2px;*/
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .scroll-button-container:hover {
+        transform: scale(1.1);
+        background-color: #3C47C8;
+    }
+
+    .scroll-button-container > h3 {
+        color: black;
+    }
+
+    .scroll-button-container > h3:hover {
+        color: black;
+        transform: scale(1);
     }
 }
 
