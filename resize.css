@@ -1,7 +1,9 @@
 /*super wide*/
-@media (min-width: 1930px) {
-    .steam-release {
-        min-height: 33vw;
+@media (min-width: 2200px) {
+    :root {
+        --h1-size: 64px;
+        --h2-size: 34px;
+        --p-size: 28px;
     }
 }
 
@@ -79,6 +81,10 @@
         width: 80px;
         height: 80px;
         /*border-radius: 8px;*/
+    }
+    
+    .steam-release-subheading {
+        padding-right: 20%;
     }
 }
 
