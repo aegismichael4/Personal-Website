@@ -83,7 +83,7 @@
 .game-jam-info {
     margin-left: 7%;
     margin-right: 7%;
-    margin-bottom: 7%;
+    /*margin-bottom: 7%;*/
 
     display: none;
 }
