@@ -51,3 +51,9 @@
 .break {
     flex-basis: 100%
 }
+
+.explosion {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+}

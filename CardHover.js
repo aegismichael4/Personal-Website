@@ -11,7 +11,6 @@ const blogHoverCards = blogHoverCardsContainer.querySelectorAll("img");
 
 hoverCards.forEach((card) => {
     card.addEventListener("mousemove", (e) => hover(e, card));
-    console.log("test");
 });
 
 blogHoverCards.forEach((card) => {
