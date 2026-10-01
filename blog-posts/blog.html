@@ -45,11 +45,11 @@
 
         <div class="blog" id="stardozing-star-generator">
             <h1>SteamID-Based Star Texture Generator</h1>
-            <h4>Published: 5.3.2026 ⭑ Last Updated: 5.5.2026</h4>
+            <h4>Published: 5.3.2026 ⭑ Last Updated: 10.1.2026</h4>
 
             <h2>The Concept</h2>
             <p>
-                I'm currently working on a 3D "friendslop" game called stardozing. In this game, you play as a little
+                I'm currently working on a 3D 'friendslop' game called stardozing. In this game, you play as a little
                 star-bellied catbear, which looks a little something like this.
             </p>
             <img src="./img/star-generator/01-catbear-model.png" alt="Catbear" draggable="false" style="width: 20%">
@@ -93,11 +93,56 @@
                 My next step was to connect that render texture to the starbear's star material, which put a funky shaped star
                 on there, like this!
             </p>
-            <img src="./img/star-generator/07-star-on-bellay.png" alt="Star deformation plus random selection">
+            <img src="./img/star-generator/07-star-on-bellay.png" alt="Star on belly">
 
             <p>
-                This is as far as I've got for now, as we're buckling on gameplay at the moment, but look forward to updates soon!
+                The final step was make a simple algorithm to convert the 17-bit Steam ID into a usable integer seed, then
+                repeat the process of making a unique star for every player that spawns, feeding it their Steam ID, and
+                applying the generated texture to their star-belly material.
             </p>
+
+            <h2>The Result</h2>
+            <p>
+                And voilà! Unique stars for everyone!
+            </p>
+            <img src="./img/star-generator/08-sibling-stars.png" alt="Example bear stars.">
+            <h6>My sibling's stars.</h6>
+
+            <p>
+                I'll let you in on a dirty secret. When I first set this up, I didn't really the star it generated for me. So I ended up
+                just... taking the Steam ID and adding +1 to it. I didn't love that either, so I repeated that process until I found one
+                that I really liked (I ended up adding something like 30 to the result).
+                <br><br>
+                By chance, all of my teammates also ended up loving
+                their star texture with this little cheat, so we went with it! Don't worry though, everyone still gets a unique seed
+                based on their Steam ID--it's just offset a little bit for purely selfish reasons.
+            </p>
+            <img src="./img/star-generator/09-aegis-star.png" alt="Aegis' personal star.">
+            <h6>My personal star.</h6>
+
+            <h2>Shenanigans</h2>
+            <p>
+                At some point, we had a realization about these star textures. Having a personally-identifiable star texture on your belly
+                was already great, but what if we used that texture elsewhere in the game? We could even use it to distinguish you
+                from your teammates, where necessary!
+                <br><br>
+                So far, we've used the same texture for the star particles that emanate from your arms and legs (as only the ends of them
+                are visible in first person) and for the star particles that drift along the bottomless pits' fog.
+            </p>
+            <img src="./img/star-generator/10-arm-particles.png" alt="Arm star particles">
+            <img src="./img/star-generator/11-pit-fog.gif" alt="Pit fog with star particles">
+
+            <p>
+                Currently, one of our gameplay programmers is working on using the star texture for a ping ability! That way, you'll
+                know exactly who pinged, based on the star shape (and color, as she intends to use the customization color of the
+                player as well).
+                <br><br>
+                Overall, I'm very happy with how the star generator turned out, and I'm very excited to continue applying the star
+                textures throughout the game.
+                <br><br>
+                Thanks for reading!
+            </p>
+
         </div>
 
         <div class="blog" id="stardozing-procedural-generation">
