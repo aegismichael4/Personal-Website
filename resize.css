@@ -119,6 +119,7 @@
     .about-me-buttons > a > button {
         padding: 5px 5px;
         border-radius: 5px;
+        height: 40px;
     }
 
     .icons > div {

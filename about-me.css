@@ -14,17 +14,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: right;
+    gap: 2px;
 }
 
 .about-me-buttons > a > button {
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    height: 50px;
 
     background-color: white;
     border-radius: 10px;
 
-    padding: 10px 10px;
+    /*padding: 10px 10px;*/
 
     font-family: "lora";
     font-weight: bold;
@@ -33,6 +36,8 @@
 
     border: none;
     margin-bottom: 5%;
+
+    filter: drop-shadow(3px 3px 10px);
 
     transition: all 0.30s ease-in-out;
 }
